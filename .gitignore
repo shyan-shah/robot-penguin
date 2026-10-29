@@ -1,0 +1,26 @@
+# ---- Build artefacts (regenerable) ----
+firmware/penguin/.pio/
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# ---- Inventor backups, locks and scratch ----
+CAD/OldVersions/
+CAD/dummies/OldVersions/
+*.lck
+*.bak
+~$*
+*.ipj.*
+
+# ---- Render frame sequences ----
+# Intermediates only: ffmpeg turns these into the committed .mp4 / .gif files,
+# and they are ~187 MB of PNGs. Regenerate with CAD/render_shots.py.
+CAD/renders/behaviours/
+CAD/renders/turntable/
+CAD/renders/turntable360/
+CAD/renders/walk/
+
+# ---- OS clutter ----
+Thumbs.db
+desktop.ini
+.DS_Store

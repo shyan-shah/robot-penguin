@@ -1,0 +1,80 @@
+=== gait search (cross-entropy over CPG + balance gains) ===
+  iter  0  best    -96.3  mean   -403.8   fwd   29.7 mm  fell=False  tau 100%
+  iter  1  best   -104.9  mean   -275.6   fwd   52.9 mm  fell=False  tau 100%
+  iter  2  best    -56.6  mean   -209.3   fwd  -17.7 mm  fell=False  tau  79%
+  iter  3  best    -10.7  mean   -121.9   fwd   26.9 mm  fell=False  tau  77%
+  iter  4  best     25.0  mean    -40.7   fwd   35.1 mm  fell=False  tau  72%
+  iter  5  best     41.2  mean    -16.6   fwd   48.9 mm  fell=False  tau  69%
+  iter  6  best     45.1  mean      6.2   fwd   56.7 mm  fell=False  tau  69%
+  iter  7  best     51.3  mean     19.1   fwd   66.2 mm  fell=False  tau  68%
+  iter  8  best     57.9  mean     34.5   fwd   65.2 mm  fell=False  tau  66%
+  iter  9  best     66.8  mean     37.7   fwd   76.1 mm  fell=False  tau  68%
+  iter 10  best     67.6  mean     48.3   fwd   76.4 mm  fell=False  tau  67%
+  iter 11  best     68.5  mean     47.4   fwd   75.0 mm  fell=False  tau  68%
+  iter 12  best     71.3  mean     55.4   fwd   77.9 mm  fell=False  tau  66%
+  iter 13  best     69.7  mean     53.2   fwd   77.9 mm  fell=False  tau  66%
+best gait: {"roll": 9.1, "yaw": 11.59, "phase": 0.2, "period": 1.54, "toe_out": 9.56, "kp": 0.72, "kd": 0.01, "lean_scale": 0.84}
+  forward 77.9 mm in 8 s  = 9.7 mm/s, lateral -4.7, yaw 6.1 deg, tau 66%
+
+=== fall recovery ===
+  back   a=0.50  final_up 0.049  peak 0.101  
+  back   a=0.62  final_up 0.049  peak 0.101  
+  back   a=0.75  final_up 0.049  peak 0.103  
+  back   a=0.88  final_up 0.049  peak 0.102  
+  back   a=1.00  final_up 0.048  peak 0.101  
+  back   a=1.12  final_up 0.049  peak 0.103  
+  back   a=1.25  final_up 0.048  peak 0.102  
+  back   a=1.38  final_up 0.049  peak 0.100  
+  back   a=1.50  final_up 0.049  peak 0.102  
+  front  a=0.50  final_up 0.098  peak 0.161  
+  front  a=0.62  final_up 0.098  peak 0.162  
+  front  a=0.75  final_up 0.098  peak 0.162  
+  front  a=0.88  final_up 0.098  peak 0.162  
+  front  a=1.00  final_up 0.098  peak 0.162  
+  front  a=1.12  final_up 0.098  peak 0.162  
+  front  a=1.25  final_up 0.098  peak 0.192  
+  front  a=1.38  final_up 0.098  peak 0.192  
+  front  a=1.50  final_up 0.098  peak 0.192  
+  side   a=0.50  final_up 0.098  peak 0.169  
+  side   a=0.62  final_up 0.098  peak 0.169  
+  side   a=0.75  final_up 0.098  peak 0.169  
+  side   a=0.88  final_up 0.098  peak 0.169  
+  side   a=1.00  final_up 0.098  peak 0.172  
+  side   a=1.12  final_up 0.098  peak 0.197  
+  side   a=1.25  final_up 0.098  peak 0.193  
+  side   a=1.38  final_up 0.098  peak 0.180  
+  side   a=1.50  final_up 0.098  peak 0.181  
+  back   DOES NOT RECOVER (best effort scale 1.12)
+  front  DOES NOT RECOVER (best effort scale 1.50)
+  side   DOES NOT RECOVER (best effort scale 1.12)
+
+=== behaviour stability (balance gains kp=0.72 kd=0.006) ===
+  emote  happy       1.35s  min_up 1.000  tau  56%  drift   0.7 mm  ok
+  emote  excited     1.40s  min_up 1.000  tau  54%  drift   1.2 mm  ok
+  emote  sad         2.80s  min_up 1.000  tau  58%  drift   2.2 mm  ok
+  emote  scared      1.60s  min_up 1.000  tau  87%  drift   2.1 mm  ok
+  emote  curious     2.20s  min_up 1.000  tau  61%  drift   1.2 mm  ok
+  emote  sleepy      4.20s  min_up 1.000  tau  60%  drift   3.0 mm  ok
+  emote  angry       1.10s  min_up 1.000  tau  75%  drift   1.7 mm  ok
+  emote  confused    2.10s  min_up 1.000  tau  73%  drift   0.7 mm  ok
+  emote  proud       2.30s  min_up 1.000  tau  61%  drift   2.4 mm  ok
+  emote  giggle      0.95s  min_up 1.000  tau  87%  drift   1.8 mm  ok
+  emote  greet       1.60s  min_up 1.000  tau  58%  drift   0.2 mm  ok
+  trick  bow         2.40s  min_up 1.000  tau  50%  drift   2.1 mm  ok
+  trick  wave        1.85s  min_up 1.000  tau  58%  drift   1.8 mm  ok
+  trick  flap        1.30s  min_up 1.000  tau  57%  drift   1.4 mm  ok
+  trick  nod         1.40s  min_up 1.000  tau  59%  drift   1.5 mm  ok
+  trick  peekaboo    2.60s  min_up 1.000  tau  56%  drift   0.6 mm  ok
+  trick  spin        2.10s  min_up 0.999  tau 100%  drift   6.5 mm  ok
+  dance  bob         9.27s  min_up 1.000  tau  67%  drift   2.4 mm  ok
+  dance  flap        7.97s  min_up 1.000  tau  93%  drift   5.4 mm  ok
+  dance  sway       11.09s  min_up 1.000  tau  66%  drift   5.1 mm  ok
+
+=== push resistance (standing) ===
+  push 0.6 N from 8 directions: 8/8 stayed up
+  push 1.0 N from 8 directions: 8/8 stayed up
+  push 1.4 N from 8 directions: 8/8 stayed up
+  push 1.8 N from 8 directions: 6/8 stayed up
+  push 2.2 N from 8 directions: 4/8 stayed up
+
+done in 173 s

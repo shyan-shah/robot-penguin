@@ -1,0 +1,82 @@
+[
+ {
+  "surface": "hard floor",
+  "gait": "v1",
+  "forward_mm": 75.17206861905699,
+  "speed_mms": 7.517206861905699,
+  "falls": 0,
+  "stumbles": 0
+ },
+ {
+  "surface": "hard floor",
+  "gait": "v2",
+  "forward_mm": -82.13657930230907,
+  "speed_mms": -8.213657930230907,
+  "falls": 3,
+  "stumbles": 17
+ },
+ {
+  "surface": "low pile 4 mm",
+  "gait": "v1",
+  "forward_mm": -46.136156299916856,
+  "speed_mms": -4.613615629991686,
+  "falls": 2,
+  "stumbles": 12
+ },
+ {
+  "surface": "low pile 4 mm",
+  "gait": "v2",
+  "forward_mm": -82.23249621076764,
+  "speed_mms": -8.223249621076764,
+  "falls": 3,
+  "stumbles": 17
+ },
+ {
+  "surface": "medium pile 8 mm",
+  "gait": "v1",
+  "forward_mm": -25.347489332355547,
+  "speed_mms": -2.5347489332355546,
+  "falls": 2,
+  "stumbles": 9
+ },
+ {
+  "surface": "medium pile 8 mm",
+  "gait": "v2",
+  "forward_mm": -58.273359257002745,
+  "speed_mms": -5.827335925700274,
+  "falls": 3,
+  "stumbles": 14
+ },
+ {
+  "surface": "deep pile 14 mm",
+  "gait": "v1",
+  "forward_mm": -57.75723937447515,
+  "speed_mms": -5.7757239374475144,
+  "falls": 2,
+  "stumbles": 12
+ },
+ {
+  "surface": "deep pile 14 mm",
+  "gait": "v2",
+  "forward_mm": -94.06728021853998,
+  "speed_mms": -9.406728021853997,
+  "falls": 3,
+  "stumbles": 18
+ },
+ {
+  "surface": "rug hem 6 mm step",
+  "gait": "v1",
+  "forward_mm": -0.4823992835222974,
+  "speed_mms": -0.04823992835222974,
+  "falls": 3,
+  "stumbles": 3
+ },
+ {
+  "surface": "rug hem 6 mm step",
+  "gait": "v2",
+  "forward_mm": -0.4316026330972063,
+  "speed_mms": -0.04316026330972063,
+  "falls": 3,
+  "stumbles": 3
+ }
+]

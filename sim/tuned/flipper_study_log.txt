@@ -1,0 +1,10 @@
+=== how long do the flippers need to be? (fall: on its back) ===
+    current flipper 55.0 mm, pivot 46.7 mm above the floor when down
+  flipper  55.0 mm (reach   8.3 mm past the floor) -> peak_up 0.352  final 0.049  
+  flipper  71.5 mm (reach  24.8 mm past the floor) -> peak_up 0.418  final 0.049  
+  flipper  88.0 mm (reach  41.3 mm past the floor) -> peak_up 0.614  final 0.098  
+  flipper 104.5 mm (reach  57.8 mm past the floor) -> peak_up 0.699  final 0.098  
+  flipper 121.0 mm (reach  74.3 mm past the floor) -> peak_up 0.808  final 0.117  
+
+no flipper length in this range self-rights it; the limit is not leverage alone
+done in 553 s

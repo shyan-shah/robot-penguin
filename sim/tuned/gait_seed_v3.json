@@ -1,0 +1,15 @@
+{
+ "params": {
+  "roll": 18.0,
+  "yaw": 14.0,
+  "phase": 0.25,
+  "period": 1.5,
+  "toe_out": 4.0,
+  "dwell": 0.65,
+  "flip_amp": 15.0,
+  "kp": 0.5,
+  "kd": 0.05,
+  "lean_scale": 1.0
+ },
+ "note": "hand-found against the body-frame controller"
+}

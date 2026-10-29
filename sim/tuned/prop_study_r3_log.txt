@@ -1,0 +1,18 @@
+=== tail prop, round 3: longer, pushing round 2's best corner ===
+    round 2 reached peak 0.708 at 90 mm / 10 deg / Z 55 (bare control 0.139)
+    same search budget for every row, bare robot included as the control
+
+   len     up  att Z    tip Y    tip Z  mass g   result
+     -      -      -        -        -     0.0   peak 0.139  final 0.098   <- BARE ROBOT (control)
+   110     10     45   -146.3     64.1    19.6   peak 0.790  final 0.776  
+   110      0     55   -148.0     55.0    19.6   peak 0.768  final 0.754  
+   110     10     55   -146.3     74.1    19.6   peak 0.762  final 0.746  
+   110     20     55   -141.4     92.6    19.6   peak 0.746  final 0.729  
+   130     10     55   -166.0     77.6    23.2   peak 0.803  final 0.791  
+   150     10     55   -185.7     81.0    26.8   peak 0.835  final 0.826  
+   110     10     65   -146.3     84.1    19.6   peak 0.734  final 0.718  
+   130      0     65   -168.0     65.0    23.2   peak 0.784  final 0.772  
+    90     10     55   -126.6     70.6    16.1   peak 0.709  final 0.688  
+
+none stands up. best 150 mm at 10 deg: peak 0.835 vs 0.139 bare (+0.696)
+done in 476 s

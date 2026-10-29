@@ -1,0 +1,14 @@
+=== tail prop, round 4: four-stage recovery, shortest tail that works ===
+    spur off Y -38, Z 55, 10 deg above horizontal; length swept
+    stage D (flippers forward + ankle push) is the new part
+
+    len  mass g   result
+   bare     0.0   final 0.098  peak 0.139  feet 0.00N tail 5.18N             <- BARE ROBOT (control)
+     50     8.9   final 0.515  peak 0.547  feet 2.07N tail 3.68N           
+     70    12.5   final 0.612  peak 0.638  feet 3.17N tail 1.42N           
+     90    16.1   final 0.688  peak 0.708  feet 3.65N tail 2.87N           
+    110    19.6   final 0.746  peak 0.761  feet 3.73N tail 3.18N           
+    130    23.2   final 0.791  peak 0.803  feet 4.32N tail 1.10N           
+
+none stands up; best 130 mm at final_up 0.791
+done in 482 s

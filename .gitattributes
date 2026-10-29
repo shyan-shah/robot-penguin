@@ -1,0 +1,17 @@
+# Default: let git normalise text
+* text=auto
+
+# Binary — never touch line endings or try to diff
+*.ipt   binary
+*.iam   binary
+*.idw   binary
+*.xlsx  binary
+*.slx   binary
+*.stl   binary
+*.stp   binary
+*.step  binary
+*.png   binary
+*.jpg   binary
+*.gif   binary
+*.mp4   binary
+*.bin   binary

@@ -1,0 +1,242 @@
+<?xml version="1.0"?>
+<robot name="penguin">
+  <link name="torso">
+    <inertial>
+      <origin xyz="-0.000167 0.000625 0.054408" rpy="0 0 0"/>
+      <mass value="0.482653"/>
+      <inertia ixx="0.000996866" iyy="0.001098074" izz="0.000476113" ixy="0.000000708" iyz="0.000001977" ixz="0.000006784"/>
+    </inertial>
+    <visual>
+      <origin xyz="-0.000000 -0.000000 -0.000000" rpy="0 0 0"/>
+      <geometry><mesh filename="C:/Users/shyan/OneDrive - University of Bath/Year 4/Projects/Penguin/CAD/exports/stl_assembled/base_plate.stl" scale="0.001 0.001 0.001"/></geometry>
+      <material name="mat_base_plate"><color rgba="0.40 0.40 0.43 1"/></material>
+    </visual>
+    <visual>
+      <origin xyz="-0.000000 -0.000000 -0.000000" rpy="0 0 0"/>
+      <geometry><mesh filename="C:/Users/shyan/OneDrive - University of Bath/Year 4/Projects/Penguin/CAD/exports/stl_assembled/core_frame.stl" scale="0.001 0.001 0.001"/></geometry>
+      <material name="mat_core_frame"><color rgba="0.40 0.40 0.43 1"/></material>
+    </visual>
+    <visual>
+      <origin xyz="-0.000000 -0.000000 -0.000000" rpy="0 0 0"/>
+      <geometry><mesh filename="C:/Users/shyan/OneDrive - University of Bath/Year 4/Projects/Penguin/CAD/exports/stl_assembled/body_front.stl" scale="0.001 0.001 0.001"/></geometry>
+      <material name="mat_body_front"><color rgba="0.93 0.93 0.95 1"/></material>
+    </visual>
+    <visual>
+      <origin xyz="-0.000000 -0.000000 -0.000000" rpy="0 0 0"/>
+      <geometry><mesh filename="C:/Users/shyan/OneDrive - University of Bath/Year 4/Projects/Penguin/CAD/exports/stl_assembled/body_back.stl" scale="0.001 0.001 0.001"/></geometry>
+      <material name="mat_body_back"><color rgba="0.10 0.10 0.12 1"/></material>
+    </visual>
+    <visual>
+      <origin xyz="-0.000000 -0.000000 -0.000000" rpy="0 0 0"/>
+      <geometry><mesh filename="C:/Users/shyan/OneDrive - University of Bath/Year 4/Projects/Penguin/CAD/exports/stl_assembled/head_front.stl" scale="0.001 0.001 0.001"/></geometry>
+      <material name="mat_head_front"><color rgba="0.93 0.93 0.95 1"/></material>
+    </visual>
+    <visual>
+      <origin xyz="-0.000000 -0.000000 -0.000000" rpy="0 0 0"/>
+      <geometry><mesh filename="C:/Users/shyan/OneDrive - University of Bath/Year 4/Projects/Penguin/CAD/exports/stl_assembled/head_back.stl" scale="0.001 0.001 0.001"/></geometry>
+      <material name="mat_head_back"><color rgba="0.10 0.10 0.12 1"/></material>
+    </visual>
+    <visual>
+      <origin xyz="-0.000000 -0.000000 -0.000000" rpy="0 0 0"/>
+      <geometry><mesh filename="C:/Users/shyan/OneDrive - University of Bath/Year 4/Projects/Penguin/CAD/exports/stl_assembled/beak_upper.stl" scale="0.001 0.001 0.001"/></geometry>
+      <material name="mat_beak_upper"><color rgba="0.95 0.45 0.05 1"/></material>
+    </visual>
+    <collision>
+      <origin xyz="-0.000000 -0.000000 -0.000000" rpy="0 0 0"/>
+      <geometry><mesh filename="C:/Users/shyan/OneDrive - University of Bath/Year 4/Projects/Penguin/CAD/exports/stl_assembled/base_plate.stl" scale="0.001 0.001 0.001"/></geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.000000 -0.000000 -0.000000" rpy="0 0 0"/>
+      <geometry><mesh filename="C:/Users/shyan/OneDrive - University of Bath/Year 4/Projects/Penguin/CAD/exports/stl_assembled/body_front.stl" scale="0.001 0.001 0.001"/></geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.000000 -0.000000 -0.000000" rpy="0 0 0"/>
+      <geometry><mesh filename="C:/Users/shyan/OneDrive - University of Bath/Year 4/Projects/Penguin/CAD/exports/stl_assembled/body_back.stl" scale="0.001 0.001 0.001"/></geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.000000 -0.000000 -0.000000" rpy="0 0 0"/>
+      <geometry><mesh filename="C:/Users/shyan/OneDrive - University of Bath/Year 4/Projects/Penguin/CAD/exports/stl_assembled/head_front.stl" scale="0.001 0.001 0.001"/></geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.000000 -0.000000 -0.000000" rpy="0 0 0"/>
+      <geometry><mesh filename="C:/Users/shyan/OneDrive - University of Bath/Year 4/Projects/Penguin/CAD/exports/stl_assembled/head_back.stl" scale="0.001 0.001 0.001"/></geometry>
+    </collision>
+      <collision>
+      <origin xyz="0 -0.061143 0.007305" rpy="-0.34907 0 0"/>
+      <geometry><box size="0.01200 0.04500 0.01200"/></geometry>
+    </collision>
+    <visual>
+      <origin xyz="0 -0.061143 0.007305" rpy="-0.34907 0 0"/>
+      <geometry><box size="0.01200 0.04500 0.01200"/></geometry>
+      <material name="mat_prop"><color rgba="0.85 0.35 0.1 1"/></material>
+    </visual>
+</link>
+  <link name="leg_R">
+    <inertial>
+      <origin xyz="-0.000000 -0.003040 -0.030732" rpy="0 0 0"/>
+      <mass value="0.031137"/>
+      <inertia ixx="0.000005983" iyy="0.000005500" izz="0.000003527" ixy="-0.000000000" iyz="-0.000000183" ixz="-0.000000000"/>
+    </inertial>
+    <visual>
+      <origin xyz="-0.026000 -0.000000 -0.000000" rpy="0 0 0"/>
+      <geometry><mesh filename="C:/Users/shyan/OneDrive - University of Bath/Year 4/Projects/Penguin/CAD/exports/stl_assembled/leg_R.stl" scale="0.001 0.001 0.001"/></geometry>
+      <material name="mat_leg_R"><color rgba="0.45 0.45 0.48 1"/></material>
+    </visual>
+    <collision>
+      <origin xyz="-0.026000 -0.000000 -0.000000" rpy="0 0 0"/>
+      <geometry><mesh filename="C:/Users/shyan/OneDrive - University of Bath/Year 4/Projects/Penguin/CAD/exports/stl_assembled/leg_R.stl" scale="0.001 0.001 0.001"/></geometry>
+    </collision>
+  </link>
+  <joint name="leg_R" type="revolute">
+    <parent link="torso"/>
+    <child link="leg_R"/>
+    <origin xyz="0.026000 0.000000 0.000000" rpy="0 0 0"/>
+    <axis xyz="0 0 1"/>
+    <limit lower="-1.5708" upper="1.5708" effort="0.2160" velocity="10.4720"/>
+    <dynamics damping="0.002" friction="0.0015"/>
+  </joint>
+  <link name="leg_L">
+    <inertial>
+      <origin xyz="-0.000000 -0.003040 -0.030732" rpy="0 0 0"/>
+      <mass value="0.031137"/>
+      <inertia ixx="0.000005983" iyy="0.000005500" izz="0.000003527" ixy="-0.000000000" iyz="-0.000000183" ixz="-0.000000000"/>
+    </inertial>
+    <visual>
+      <origin xyz="0.026000 -0.000000 -0.000000" rpy="0 0 0"/>
+      <geometry><mesh filename="C:/Users/shyan/OneDrive - University of Bath/Year 4/Projects/Penguin/CAD/exports/stl_assembled/leg_L.stl" scale="0.001 0.001 0.001"/></geometry>
+      <material name="mat_leg_L"><color rgba="0.45 0.45 0.48 1"/></material>
+    </visual>
+    <collision>
+      <origin xyz="0.026000 -0.000000 -0.000000" rpy="0 0 0"/>
+      <geometry><mesh filename="C:/Users/shyan/OneDrive - University of Bath/Year 4/Projects/Penguin/CAD/exports/stl_assembled/leg_L.stl" scale="0.001 0.001 0.001"/></geometry>
+    </collision>
+  </link>
+  <joint name="leg_L" type="revolute">
+    <parent link="torso"/>
+    <child link="leg_L"/>
+    <origin xyz="-0.026000 0.000000 0.000000" rpy="0 0 0"/>
+    <axis xyz="0 0 1"/>
+    <limit lower="-1.5708" upper="1.5708" effort="0.2160" velocity="10.4720"/>
+    <dynamics damping="0.002" friction="0.0015"/>
+  </joint>
+  <link name="foot_R">
+    <inertial>
+      <origin xyz="-0.000000 0.011402 -0.013971" rpy="0 0 0"/>
+      <mass value="0.014058"/>
+      <inertia ixx="0.000004059" iyy="0.000002962" izz="0.000003070" ixy="0.000000000" iyz="-0.000000196" ixz="-0.000000000"/>
+    </inertial>
+    <visual>
+      <origin xyz="-0.026000 -0.000000 0.040000" rpy="0 0 0"/>
+      <geometry><mesh filename="C:/Users/shyan/OneDrive - University of Bath/Year 4/Projects/Penguin/CAD/exports/stl_assembled/foot_R.stl" scale="0.001 0.001 0.001"/></geometry>
+      <material name="mat_foot_R"><color rgba="0.95 0.45 0.05 1"/></material>
+    </visual>
+    <collision>
+      <origin xyz="-0.026000 -0.000000 0.040000" rpy="0 0 0"/>
+      <geometry><mesh filename="C:/Users/shyan/OneDrive - University of Bath/Year 4/Projects/Penguin/CAD/exports/stl_assembled/foot_R.stl" scale="0.001 0.001 0.001"/></geometry>
+    </collision>
+  </link>
+  <joint name="foot_R" type="revolute">
+    <parent link="leg_R"/>
+    <child link="foot_R"/>
+    <origin xyz="0.000000 0.000000 -0.040000" rpy="0 0 0"/>
+    <axis xyz="0 1 0"/>
+    <limit lower="-0.5236" upper="0.5236" effort="0.2160" velocity="10.4720"/>
+    <dynamics damping="0.002" friction="0.0015"/>
+  </joint>
+  <link name="foot_L">
+    <inertial>
+      <origin xyz="-0.000000 0.011402 -0.013971" rpy="0 0 0"/>
+      <mass value="0.014058"/>
+      <inertia ixx="0.000004059" iyy="0.000002962" izz="0.000003070" ixy="0.000000000" iyz="-0.000000196" ixz="-0.000000000"/>
+    </inertial>
+    <visual>
+      <origin xyz="0.026000 -0.000000 0.040000" rpy="0 0 0"/>
+      <geometry><mesh filename="C:/Users/shyan/OneDrive - University of Bath/Year 4/Projects/Penguin/CAD/exports/stl_assembled/foot_L.stl" scale="0.001 0.001 0.001"/></geometry>
+      <material name="mat_foot_L"><color rgba="0.95 0.45 0.05 1"/></material>
+    </visual>
+    <collision>
+      <origin xyz="0.026000 -0.000000 0.040000" rpy="0 0 0"/>
+      <geometry><mesh filename="C:/Users/shyan/OneDrive - University of Bath/Year 4/Projects/Penguin/CAD/exports/stl_assembled/foot_L.stl" scale="0.001 0.001 0.001"/></geometry>
+    </collision>
+  </link>
+  <joint name="foot_L" type="revolute">
+    <parent link="leg_L"/>
+    <child link="foot_L"/>
+    <origin xyz="0.000000 0.000000 -0.040000" rpy="0 0 0"/>
+    <axis xyz="0 1 0"/>
+    <limit lower="-0.5236" upper="0.5236" effort="0.2160" velocity="10.4720"/>
+    <dynamics damping="0.002" friction="0.0015"/>
+  </joint>
+  <link name="flipper_R">
+    <inertial>
+      <origin xyz="0.055015 0.010763 -0.000019" rpy="0 0 0"/>
+      <mass value="0.006330"/>
+      <inertia ixx="0.000001572" iyy="0.000000231" izz="0.000001499" ixy="-0.000000203" iyz="-0.000000001" ixz="-0.000000000"/>
+    </inertial>
+    <visual>
+      <origin xyz="-0.000000 -0.000000 -0.078000" rpy="0 0 0"/>
+      <geometry><mesh filename="C:/Users/shyan/OneDrive - University of Bath/Year 4/Projects/Penguin/CAD/exports/stl_assembled/flipper_R.stl" scale="0.001 0.001 0.001"/></geometry>
+      <material name="mat_flipper_R"><color rgba="0.10 0.10 0.12 1"/></material>
+    </visual>
+    <collision>
+      <origin xyz="-0.000000 -0.000000 -0.078000" rpy="0 0 0"/>
+      <geometry><mesh filename="C:/Users/shyan/OneDrive - University of Bath/Year 4/Projects/Penguin/CAD/exports/stl_assembled/flipper_R.stl" scale="0.001 0.001 0.001"/></geometry>
+    </collision>
+  </link>
+  <joint name="flipper_R" type="revolute">
+    <parent link="torso"/>
+    <child link="flipper_R"/>
+    <origin xyz="0.000000 0.000000 0.078000" rpy="0 0 0"/>
+    <axis xyz="1 0 0"/>
+    <limit lower="-0.7854" upper="2.3562" effort="0.2160" velocity="10.4720"/>
+    <dynamics damping="0.002" friction="0.0015"/>
+  </joint>
+  <link name="flipper_L">
+    <inertial>
+      <origin xyz="-0.055015 0.010763 -0.000019" rpy="0 0 0"/>
+      <mass value="0.006330"/>
+      <inertia ixx="0.000001572" iyy="0.000000231" izz="0.000001499" ixy="0.000000203" iyz="-0.000000001" ixz="0.000000000"/>
+    </inertial>
+    <visual>
+      <origin xyz="-0.000000 -0.000000 -0.078000" rpy="0 0 0"/>
+      <geometry><mesh filename="C:/Users/shyan/OneDrive - University of Bath/Year 4/Projects/Penguin/CAD/exports/stl_assembled/flipper_L.stl" scale="0.001 0.001 0.001"/></geometry>
+      <material name="mat_flipper_L"><color rgba="0.10 0.10 0.12 1"/></material>
+    </visual>
+    <collision>
+      <origin xyz="-0.000000 -0.000000 -0.078000" rpy="0 0 0"/>
+      <geometry><mesh filename="C:/Users/shyan/OneDrive - University of Bath/Year 4/Projects/Penguin/CAD/exports/stl_assembled/flipper_L.stl" scale="0.001 0.001 0.001"/></geometry>
+    </collision>
+  </link>
+  <joint name="flipper_L" type="revolute">
+    <parent link="torso"/>
+    <child link="flipper_L"/>
+    <origin xyz="0.000000 0.000000 0.078000" rpy="0 0 0"/>
+    <axis xyz="1 0 0"/>
+    <limit lower="-0.7854" upper="2.3562" effort="0.2160" velocity="10.4720"/>
+    <dynamics damping="0.002" friction="0.0015"/>
+  </joint>
+  <link name="beak">
+    <inertial>
+      <origin xyz="0.000994 -0.001087 0.001434" rpy="0 0 0"/>
+      <mass value="0.002032"/>
+      <inertia ixx="0.000000105" iyy="0.000000130" izz="0.000000191" ixy="0.000000010" iyz="-0.000000018" ixz="0.000000009"/>
+    </inertial>
+    <visual>
+      <origin xyz="-0.000000 -0.031000 -0.131000" rpy="0 0 0"/>
+      <geometry><mesh filename="C:/Users/shyan/OneDrive - University of Bath/Year 4/Projects/Penguin/CAD/exports/stl_assembled/beak_lower.stl" scale="0.001 0.001 0.001"/></geometry>
+      <material name="mat_beak_lower"><color rgba="0.95 0.45 0.05 1"/></material>
+    </visual>
+    <collision>
+      <origin xyz="-0.000000 -0.031000 -0.131000" rpy="0 0 0"/>
+      <geometry><mesh filename="C:/Users/shyan/OneDrive - University of Bath/Year 4/Projects/Penguin/CAD/exports/stl_assembled/beak_lower.stl" scale="0.001 0.001 0.001"/></geometry>
+    </collision>
+  </link>
+  <joint name="beak" type="revolute">
+    <parent link="torso"/>
+    <child link="beak"/>
+    <origin xyz="0.000000 0.031000 0.131000" rpy="0 0 0"/>
+    <axis xyz="1 0 0"/>
+    <limit lower="0.0000" upper="0.5236" effort="0.2160" velocity="10.4720"/>
+    <dynamics damping="0.002" friction="0.0015"/>
+  </joint>
+</robot>

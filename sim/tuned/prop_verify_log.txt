@@ -1,0 +1,16 @@
+=== what the tail prop actually does ===
+
+1. end of the recovery attempt - is it standing, or propped?
+  150 mm at 10 deg       up 0.826   pitch  +34.3 deg   body CoM z 108.3 mm
+     touching: foot_L 3.13 N, foot_R 1.63 N, torso+prop 0.20 N
+     -> weight on the FEET: 4.76 N of 4.96 N total   ON ITS FEET
+  130 mm at 10 deg       up 0.791   pitch  +37.7 deg   body CoM z 105.0 mm
+     touching: foot_L 1.53 N, foot_R 2.70 N, torso+prop 0.90 N
+     -> weight on the FEET: 4.23 N of 5.12 N total   ON ITS FEET
+  110 mm at 10 deg       up 0.776   pitch  +39.1 deg   body CoM z 103.6 mm
+     touching: foot_L 2.26 N, foot_R 1.61 N, torso+prop 3.12 N
+     -> weight on the FEET: 3.87 N of 6.99 N total   ON ITS FEET
+
+2. the cost - does the tail hurt normal standing and walking?
+  bare               standing: up 1.000   tail/shell touching floor 0.00 N   tail clear
+  with 150 mm tail   standing: up 1.000   tail/shell touching floor 0.00 N   tail clear

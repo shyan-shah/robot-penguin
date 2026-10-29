@@ -1,0 +1,9 @@
+=== recovery with a catch phase, swept over flipper length ===
+    fall: on its back.  catch = stop pushing and plant the feet once
+    the body passes a learned uprightness threshold
+  flipper   71.5 mm -> peak 0.439  final 0.066  caught=False  
+  flipper   88.0 mm -> peak 0.630  final 0.098  caught=True  
+  flipper  104.5 mm -> peak 0.677  final 0.058  caught=True  
+
+still no complete recovery; best peak 0.677 at 104 mm
+done in 806 s

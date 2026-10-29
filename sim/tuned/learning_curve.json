@@ -1,0 +1,254 @@
+[
+ {
+  "day": 0,
+  "asked": 16,
+  "offline": 0,
+  "correct": 0,
+  "wrong": 0,
+  "cloud": 16,
+  "items": 12
+ },
+ {
+  "day": 1,
+  "asked": 16,
+  "offline": 0,
+  "correct": 0,
+  "wrong": 0,
+  "cloud": 16,
+  "items": 20
+ },
+ {
+  "day": 2,
+  "asked": 16,
+  "offline": 2,
+  "correct": 1,
+  "wrong": 1,
+  "cloud": 14,
+  "items": 23
+ },
+ {
+  "day": 3,
+  "asked": 16,
+  "offline": 3,
+  "correct": 2,
+  "wrong": 1,
+  "cloud": 13,
+  "items": 28
+ },
+ {
+  "day": 4,
+  "asked": 16,
+  "offline": 3,
+  "correct": 3,
+  "wrong": 0,
+  "cloud": 13,
+  "items": 33
+ },
+ {
+  "day": 5,
+  "asked": 16,
+  "offline": 6,
+  "correct": 5,
+  "wrong": 1,
+  "cloud": 10,
+  "items": 35
+ },
+ {
+  "day": 6,
+  "asked": 16,
+  "offline": 3,
+  "correct": 3,
+  "wrong": 0,
+  "cloud": 13,
+  "items": 43
+ },
+ {
+  "day": 7,
+  "asked": 16,
+  "offline": 5,
+  "correct": 4,
+  "wrong": 1,
+  "cloud": 11,
+  "items": 48
+ },
+ {
+  "day": 8,
+  "asked": 16,
+  "offline": 4,
+  "correct": 3,
+  "wrong": 1,
+  "cloud": 12,
+  "items": 50
+ },
+ {
+  "day": 9,
+  "asked": 16,
+  "offline": 6,
+  "correct": 6,
+  "wrong": 0,
+  "cloud": 10,
+  "items": 53
+ },
+ {
+  "day": 10,
+  "asked": 16,
+  "offline": 5,
+  "correct": 4,
+  "wrong": 1,
+  "cloud": 11,
+  "items": 53
+ },
+ {
+  "day": 11,
+  "asked": 16,
+  "offline": 8,
+  "correct": 5,
+  "wrong": 3,
+  "cloud": 8,
+  "items": 53
+ },
+ {
+  "day": 12,
+  "asked": 16,
+  "offline": 5,
+  "correct": 4,
+  "wrong": 1,
+  "cloud": 11,
+  "items": 54
+ },
+ {
+  "day": 13,
+  "asked": 16,
+  "offline": 5,
+  "correct": 5,
+  "wrong": 0,
+  "cloud": 11,
+  "items": 56
+ },
+ {
+  "day": 14,
+  "asked": 16,
+  "offline": 7,
+  "correct": 6,
+  "wrong": 1,
+  "cloud": 9,
+  "items": 58
+ },
+ {
+  "day": 15,
+  "asked": 16,
+  "offline": 7,
+  "correct": 7,
+  "wrong": 0,
+  "cloud": 9,
+  "items": 60
+ },
+ {
+  "day": 16,
+  "asked": 16,
+  "offline": 9,
+  "correct": 9,
+  "wrong": 0,
+  "cloud": 7,
+  "items": 60
+ },
+ {
+  "day": 17,
+  "asked": 16,
+  "offline": 8,
+  "correct": 7,
+  "wrong": 1,
+  "cloud": 8,
+  "items": 60
+ },
+ {
+  "day": 18,
+  "asked": 16,
+  "offline": 11,
+  "correct": 10,
+  "wrong": 1,
+  "cloud": 5,
+  "items": 61
+ },
+ {
+  "day": 19,
+  "asked": 16,
+  "offline": 8,
+  "correct": 8,
+  "wrong": 0,
+  "cloud": 8,
+  "items": 62
+ },
+ {
+  "day": 20,
+  "asked": 16,
+  "offline": 8,
+  "correct": 8,
+  "wrong": 0,
+  "cloud": 8,
+  "items": 63
+ },
+ {
+  "day": 21,
+  "asked": 16,
+  "offline": 8,
+  "correct": 8,
+  "wrong": 0,
+  "cloud": 8,
+  "items": 65
+ },
+ {
+  "day": 22,
+  "asked": 16,
+  "offline": 13,
+  "correct": 13,
+  "wrong": 0,
+  "cloud": 3,
+  "items": 65
+ },
+ {
+  "day": 23,
+  "asked": 16,
+  "offline": 9,
+  "correct": 9,
+  "wrong": 0,
+  "cloud": 7,
+  "items": 67
+ },
+ {
+  "day": 24,
+  "asked": 16,
+  "offline": 8,
+  "correct": 7,
+  "wrong": 1,
+  "cloud": 8,
+  "items": 68
+ },
+ {
+  "day": 25,
+  "asked": 16,
+  "offline": 6,
+  "correct": 6,
+  "wrong": 0,
+  "cloud": 10,
+  "items": 69
+ },
+ {
+  "day": 26,
+  "asked": 16,
+  "offline": 8,
+  "correct": 7,
+  "wrong": 1,
+  "cloud": 8,
+  "items": 71
+ },
+ {
+  "day": 27,
+  "asked": 16,
+  "offline": 10,
+  "correct": 9,
+  "wrong": 1,
+  "cloud": 6,
+  "items": 73
+ }
+]

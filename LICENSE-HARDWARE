@@ -1,0 +1,43 @@
+# Hardware and documentation licence
+
+The hardware design and documentation in this repository are licensed under a
+**Creative Commons Attribution-ShareAlike 4.0 International License**
+(CC BY-SA 4.0).
+
+Full licence text: https://creativecommons.org/licenses/by-sa/4.0/legalcode
+Human-readable summary: https://creativecommons.org/licenses/by-sa/4.0/
+
+## What this covers
+
+    CAD/*.ipt              the parametric Inventor parts
+    CAD/penguin.iam        the assembly
+    CAD/dummies/           component stand-ins used by the assembly
+    CAD/exports/           STL and STEP exports
+    CAD/penguin_params.xlsx the driving parameter spreadsheet
+    CAD/renders/           all renders, stills and videos
+    CAD/REPORT.md
+    docs/                  all documentation
+    README.md  SUMMARY.md
+
+The software is licensed under MIT instead — see LICENSE.
+
+## In plain terms
+
+You are free to:
+
+- **Share** — copy and redistribute the design in any medium or format
+- **Adapt** — remix, modify, and build upon it, including commercially
+
+Provided that you:
+
+- **Give credit** — attribute the original design and link back to this
+  repository
+- **Share alike** — if you modify the design and distribute it, release your
+  version under the same CC BY-SA 4.0 licence
+
+## No warranty
+
+This design is provided as-is. It involves lithium cells, a 3 A power rail and
+moving parts. You are responsible for the safety of anything you build from it.
+Nothing in this repository has been tested on physical hardware — see the
+project status in README.md.

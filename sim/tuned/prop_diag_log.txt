@@ -1,0 +1,19 @@
+=== tracing the tail recovery, to see which stages actually fire ===
+
+  tail 90 mm   C fired at 0.42 s   D fired at 0.85 s
+     t/s :    0.0   0.5   1.0   1.5   2.0   2.5   3.0   3.5   4.0   4.5   5.0   5.5   6.0   6.5   7.0   7.5   8.0   8.5
+     up  :   0.69  0.68  0.69  0.68  0.68  0.69  0.68  0.69  0.69  0.68  0.69  0.69  0.69  0.69  0.69  0.69  0.69  0.69
+     feet:    3.2   3.4   3.2   3.9   3.8   3.7   3.9   4.6   3.5   4.4   4.2   3.9   3.2   4.7   3.6   3.7   4.3   4.4
+     tail:    1.8   1.8   1.5   2.5   2.0   1.8   2.4   2.2   2.2   2.4   2.4   0.8   1.6   1.5   1.9   2.1   2.5   1.9
+     D params: flip 31  ank 6  hip -4  rate 4.49  C_hold 0.42
+
+  tail 130 mm   C fired at 0.42 s   D fired at 0.83 s
+     t/s :    0.0   0.5   1.0   1.5   2.0   2.5   3.0   3.5   4.0   4.5   5.0   5.5   6.0   6.5   7.0   7.5   8.0   8.5
+     up  :   0.79  0.78  0.79  0.79  0.79  0.79  0.79  0.79  0.79  0.79  0.79  0.79  0.79  0.79  0.79  0.79  0.79  0.79
+     feet:    3.7   4.4   4.4   5.0   5.0   5.0   4.9   4.9   4.9   4.8   4.8   4.8   4.8   4.8   5.1   4.9   5.2   4.8
+     tail:    2.2   2.9   3.1   2.4   2.5   2.5   2.4   2.4   2.4   2.4   2.4   2.4   2.4   2.4   2.4   2.4   2.5   2.3
+     D params: flip 30  ank 2  hip -5  rate 3.89  C_hold 0.40
+
+=== control: dropped on its back, limp, no recovery attempt at all ===
+  tail  90 mm   limp resting up = 0.688   feet 3.23 N   tail 3.72 N
+  tail 130 mm   limp resting up = 0.791   feet 4.31 N   tail 1.03 N

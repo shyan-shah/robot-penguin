@@ -1,0 +1,16 @@
+=== refining for the +/-26 mm stance, seeded from the +/-22 mm result ===
+    seed: {"roll": 18.0, "yaw": 14.0, "phase": 0.25, "period": 1.5, "toe_out": 4.0, "dwell": 0.65, "flip_amp": 15.0, "kp": 0.5, "kd": 0.05, "lean_scale": 1.0}
+  iter 0  agg  -689.5 | hard  11.6 mm/s clr  18.6 | carpet  -4.8 mm/s clr  42.2 | lean 19.2 | falls 1/2
+  iter 1  agg  -701.4 | hard   6.7 mm/s clr  18.2 | carpet  -4.9 mm/s clr  40.9 | lean 20.7 | falls 1/2
+  iter 2  agg  -705.3 | hard   8.1 mm/s clr  14.7 | carpet  -4.9 mm/s clr  41.0 | lean 15.6 | falls 1/2
+  iter 3  agg  -702.4 | hard   8.7 mm/s clr  15.6 | carpet  -5.0 mm/s clr  41.6 | lean 15.6 | falls 1/2
+  iter 4  agg  -696.6 | hard   7.5 mm/s clr  19.3 | carpet  -4.8 mm/s clr  41.7 | lean 19.6 | falls 1/2
+  iter 5  agg  -692.2 | hard   9.1 mm/s clr  21.6 | carpet  -4.8 mm/s clr  41.4 | lean 17.9 | falls 1/2
+  iter 6  agg  -695.8 | hard   8.0 mm/s clr  19.6 | carpet  -4.9 mm/s clr  41.3 | lean 19.5 | falls 1/2
+  iter 7  agg  -694.8 | hard   9.6 mm/s clr  18.6 | carpet  -4.8 mm/s clr  41.3 | lean 17.8 | falls 1/2
+
+final: {"roll": 15.98, "yaw": 8.936, "phase": 0.208, "period": 1.523, "toe_out": 1.136, "dwell": 0.725, "flip_amp": 18.796, "kp": 0.494, "kd": 0.05, "lean_scale": 0.959}
+   hard          11.6 mm/s   clearance  18.6 mm   ok
+   carpet 6 mm   -4.8 mm/s   clearance  42.2 mm   FELL
+   lean 19.2 deg, saturated 9% of the time
+done in 860 s

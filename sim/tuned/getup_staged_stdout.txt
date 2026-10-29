@@ -1,0 +1,71 @@
+pybullet build time: Oct 29 2026 00:10:25
+=== two-stage recovery: side ===
+pybullet build time: Oct 29 2026 00:10:25
+pybullet build time: Oct 29 2026 00:10:25
+pybullet build time: Oct 29 2026 00:10:25
+  side  iter  0  best   45.5 | final_up 0.098 peak 0.220 side 1.00 | 
+  side  iter  1  best   47.0 | final_up 0.098 peak 0.256 side 1.00 | 
+  side  iter  2  best   47.0 | final_up 0.098 peak 0.256 side 1.00 | 
+  side  iter  3  best   47.5 | final_up 0.098 peak 0.270 side 1.00 | 
+  side  iter  4  best   48.2 | final_up 0.098 peak 0.288 side 1.00 | 
+  side  iter  5  best   48.2 | final_up 0.098 peak 0.288 side 1.00 | 
+  side  iter  6  best   48.2 | final_up 0.098 peak 0.288 side 1.00 | 
+  side  iter  7  best   48.2 | final_up 0.098 peak 0.288 side 1.00 | 
+  side  iter  8  best   48.2 | final_up 0.098 peak 0.288 side 1.00 | 
+  side  iter  9  best   48.2 | final_up 0.098 peak 0.288 side 1.00 | 
+  side  iter 10  best   48.2 | final_up 0.098 peak 0.288 side 1.00 | 
+  side  iter 11  best   48.2 | final_up 0.098 peak 0.288 side 1.00 | 
+  side  iter 12  best   48.3 | final_up 0.098 peak 0.290 side 1.00 | 
+  side  iter 13  best   48.5 | final_up 0.098 peak 0.295 side 1.00 | 
+  side  iter 14  best   48.5 | final_up 0.098 peak 0.295 side 1.00 | 
+  side  iter 15  best   48.5 | final_up 0.098 peak 0.295 side 1.00 | 
+  side  iter 16  best   48.6 | final_up 0.098 peak 0.297 side 1.00 | 
+  side  iter 17  best   48.6 | final_up 0.098 peak 0.297 side 1.00 | 
+  -> does not recover (final_up 0.10)
+=== two-stage recovery: back ===
+pybullet build time: Oct 29 2026 00:10:25
+pybullet build time: Oct 29 2026 00:10:25
+pybullet build time: Oct 29 2026 00:10:25
+  back  iter  0  best   42.6 | final_up 0.049 peak 0.293 side 1.00 | 
+  back  iter  1  best   44.2 | final_up 0.048 peak 0.336 side 1.00 | 
+  back  iter  2  best   44.2 | final_up 0.048 peak 0.336 side 1.00 | 
+  back  iter  3  best   44.4 | final_up 0.049 peak 0.337 side 1.00 | 
+  back  iter  4  best   44.4 | final_up 0.049 peak 0.337 side 1.00 | 
+  back  iter  5  best   44.6 | final_up 0.048 peak 0.347 side 1.00 | 
+  back  iter  6  best   45.2 | final_up 0.049 peak 0.358 side 1.00 | 
+  back  iter  7  best   46.1 | final_up 0.049 peak 0.381 side 1.00 | 
+  back  iter  8  best   46.1 | final_up 0.049 peak 0.381 side 1.00 | 
+  back  iter  9  best   46.3 | final_up 0.048 peak 0.389 side 1.00 | 
+  back  iter 10  best   46.3 | final_up 0.048 peak 0.389 side 1.00 | 
+  back  iter 11  best   46.3 | final_up 0.048 peak 0.389 side 1.00 | 
+  back  iter 12  best   46.3 | final_up 0.048 peak 0.389 side 1.00 | 
+  back  iter 13  best   46.3 | final_up 0.048 peak 0.389 side 1.00 | 
+  back  iter 14  best   46.3 | final_up 0.048 peak 0.389 side 1.00 | 
+  back  iter 15  best   46.3 | final_up 0.048 peak 0.389 side 1.00 | 
+  back  iter 16  best   46.3 | final_up 0.048 peak 0.389 side 1.00 | 
+  back  iter 17  best   46.3 | final_up 0.048 peak 0.389 side 1.00 | 
+  -> does not recover (final_up 0.05)
+=== two-stage recovery: front ===
+pybullet build time: Oct 29 2026 00:10:25
+pybullet build time: Oct 29 2026 00:10:25
+pybullet build time: Oct 29 2026 00:10:25
+  front iter  0  best   47.7 | final_up 0.098 peak 0.274 side 1.00 | 
+  front iter  1  best   49.6 | final_up 0.098 peak 0.323 side 1.00 | 
+  front iter  2  best   52.1 | final_up 0.098 peak 0.385 side 1.00 | 
+  front iter  3  best   52.7 | final_up 0.098 peak 0.398 side 1.00 | 
+  front iter  4  best   52.7 | final_up 0.098 peak 0.398 side 1.00 | 
+  front iter  5  best   52.7 | final_up 0.098 peak 0.400 side 1.00 | 
+  front iter  6  best   52.9 | final_up 0.098 peak 0.403 side 1.00 | 
+  front iter  7  best   52.9 | final_up 0.098 peak 0.404 side 1.00 | 
+  front iter  8  best   52.9 | final_up 0.098 peak 0.405 side 1.00 | 
+  front iter  9  best   52.9 | final_up 0.098 peak 0.405 side 1.00 | 
+  front iter 10  best   53.0 | final_up 0.098 peak 0.406 side 1.00 | 
+  front iter 11  best   53.0 | final_up 0.098 peak 0.406 side 1.00 | 
+  front iter 12  best   53.0 | final_up 0.098 peak 0.406 side 1.00 | 
+  front iter 13  best   53.0 | final_up 0.098 peak 0.406 side 1.00 | 
+  front iter 14  best   53.0 | final_up 0.098 peak 0.406 side 1.00 | 
+  front iter 15  best   53.0 | final_up 0.098 peak 0.406 side 1.00 | 
+  front iter 16  best   53.0 | final_up 0.098 peak 0.406 side 1.00 | 
+  front iter 17  best   53.0 | final_up 0.098 peak 0.406 side 1.00 | 
+  -> does not recover (final_up 0.10)
+done in 951 s

@@ -1,0 +1,441 @@
+{
+ "gait_source": "gait_final.json",
+ "params": {
+  "roll": 15.979900356376103,
+  "yaw": 8.936102748315601,
+  "phase": 0.20784615094586595,
+  "period": 1.522875839084406,
+  "toe_out": 1.1361601266753785,
+  "dwell": 0.725140440452316,
+  "flip_amp": 18.795973646838952,
+  "kp": 0.49426503703254526,
+  "kd": 0.050482923433957605,
+  "lean_scale": 0.9594519301859025
+ },
+ "standing": {
+  "up": 0.9998888974360234,
+  "com_mm": 106.27465503540614,
+  "foot_R_N": 6.0016786678210865,
+  "foot_L_N": 0.0,
+  "torque_pct": 100.0
+ },
+ "behaviours": [
+  {
+   "kind": "emote",
+   "name": "angry",
+   "forward_mm": 1.231597114336703,
+   "lateral_mm": 1.1389465284591191,
+   "yaw_deg": 4.721798780786301,
+   "min_up": 0.9998288856804344,
+   "fell": false,
+   "clearance_mm": null,
+   "lean_max": 0.9938037389634984,
+   "torque_pct": 99.24824065216734
+  },
+  {
+   "kind": "emote",
+   "name": "confused",
+   "forward_mm": 1.154816475411943,
+   "lateral_mm": 1.3229521922969028,
+   "yaw_deg": -1.478398822142869,
+   "min_up": 0.9964866816244784,
+   "fell": false,
+   "clearance_mm": null,
+   "lean_max": 4.697373567248496,
+   "torque_pct": 100.00000000000001
+  },
+  {
+   "kind": "emote",
+   "name": "curious",
+   "forward_mm": 1.6904027812749747,
+   "lateral_mm": -0.2690067154603867,
+   "yaw_deg": 0.799409618936078,
+   "min_up": 0.9963525378034269,
+   "fell": false,
+   "clearance_mm": null,
+   "lean_max": 4.891856044118402,
+   "torque_pct": 100.00000000000001
+  },
+  {
+   "kind": "emote",
+   "name": "excited",
+   "forward_mm": 2.1611095077004667,
+   "lateral_mm": 0.5966142513651789,
+   "yaw_deg": 1.1753307824949102,
+   "min_up": 0.9998808390052163,
+   "fell": false,
+   "clearance_mm": null,
+   "lean_max": 0.8581741748536892,
+   "torque_pct": 65.63694925638771
+  },
+  {
+   "kind": "emote",
+   "name": "giggle",
+   "forward_mm": 1.7392199140864968,
+   "lateral_mm": 3.135613392871106,
+   "yaw_deg": 1.6955647019312519,
+   "min_up": 0.9984793635789165,
+   "fell": false,
+   "clearance_mm": null,
+   "lean_max": 2.5935855937189105,
+   "torque_pct": 100.00000000000001
+  },
+  {
+   "kind": "emote",
+   "name": "greet",
+   "forward_mm": 1.461599625187671,
+   "lateral_mm": -0.9719771378815081,
+   "yaw_deg": 0.3600607610775749,
+   "min_up": 0.9998731288326795,
+   "fell": false,
+   "clearance_mm": null,
+   "lean_max": 0.8674948663870173,
+   "torque_pct": 57.03609742952064
+  },
+  {
+   "kind": "emote",
+   "name": "happy",
+   "forward_mm": 0.39904269987540697,
+   "lateral_mm": 0.029316483493241254,
+   "yaw_deg": 0.11059659443998703,
+   "min_up": 0.9988313007934085,
+   "fell": false,
+   "clearance_mm": null,
+   "lean_max": 2.7210662533242846,
+   "torque_pct": 100.00000000000001
+  },
+  {
+   "kind": "emote",
+   "name": "proud",
+   "forward_mm": 0.772143742757923,
+   "lateral_mm": -0.12109302842635553,
+   "yaw_deg": 0.7014770850510983,
+   "min_up": 0.9998411459820242,
+   "fell": false,
+   "clearance_mm": null,
+   "lean_max": 0.9443622263566583,
+   "torque_pct": 82.78658376043347
+  },
+  {
+   "kind": "emote",
+   "name": "sad",
+   "forward_mm": 1.1115754883762254,
+   "lateral_mm": 0.09026067417633205,
+   "yaw_deg": 1.482435030332717,
+   "min_up": 0.9998604045579839,
+   "fell": false,
+   "clearance_mm": null,
+   "lean_max": 0.8963697792610295,
+   "torque_pct": 61.91057171607168
+  },
+  {
+   "kind": "emote",
+   "name": "scared",
+   "forward_mm": -2.2342182906787147,
+   "lateral_mm": -0.11883497407004658,
+   "yaw_deg": -3.2324916435609556,
+   "min_up": 0.9990092082788874,
+   "fell": false,
+   "clearance_mm": null,
+   "lean_max": 2.334615506891815,
+   "torque_pct": 100.00000000000001
+  },
+  {
+   "kind": "emote",
+   "name": "sleepy",
+   "forward_mm": 4.212066723094699,
+   "lateral_mm": 0.10182555470047983,
+   "yaw_deg": 0.8603463427395053,
+   "min_up": 0.9987717311068326,
+   "fell": false,
+   "clearance_mm": null,
+   "lean_max": 2.818666127787808,
+   "torque_pct": 100.00000000000001
+  },
+  {
+   "kind": "trick",
+   "name": "bigyawn",
+   "forward_mm": 0.5627028554360525,
+   "lateral_mm": -1.3595123015344608,
+   "yaw_deg": -0.4558404834274956,
+   "min_up": 0.999674954300943,
+   "fell": false,
+   "clearance_mm": null,
+   "lean_max": 1.4164537553254193,
+   "torque_pct": 100.00000000000001
+  },
+  {
+   "kind": "trick",
+   "name": "bow",
+   "forward_mm": 3.449635429382565,
+   "lateral_mm": 0.24007914030659733,
+   "yaw_deg": 5.547622348963891,
+   "min_up": 0.99983454215163,
+   "fell": false,
+   "clearance_mm": null,
+   "lean_max": 0.9526963836964442,
+   "torque_pct": 61.641513730542336
+  },
+  {
+   "kind": "trick",
+   "name": "flap",
+   "forward_mm": 1.318395876194376,
+   "lateral_mm": 0.8867867371075809,
+   "yaw_deg": 1.201746938692488,
+   "min_up": 0.999880966558194,
+   "fell": false,
+   "clearance_mm": null,
+   "lean_max": 0.8570711150582264,
+   "torque_pct": 49.42475645409209
+  },
+  {
+   "kind": "trick",
+   "name": "headbang",
+   "forward_mm": 0.11690884771883044,
+   "lateral_mm": -3.1822100535457856,
+   "yaw_deg": 0.13692550345196433,
+   "min_up": 0.99583952749505,
+   "fell": false,
+   "clearance_mm": null,
+   "lean_max": 4.547885235916204,
+   "torque_pct": 100.00000000000001
+  },
+  {
+   "kind": "trick",
+   "name": "hiccup",
+   "forward_mm": 1.0620607845244132,
+   "lateral_mm": 1.754418651046203,
+   "yaw_deg": -1.0050658943329396,
+   "min_up": 0.9987443290841138,
+   "fell": false,
+   "clearance_mm": null,
+   "lean_max": 2.6574399508912374,
+   "torque_pct": 100.00000000000001
+  },
+  {
+   "kind": "trick",
+   "name": "nod",
+   "forward_mm": -0.02860932023262088,
+   "lateral_mm": 1.0258835511354158,
+   "yaw_deg": -0.4912401343266919,
+   "min_up": 0.9998788828578544,
+   "fell": false,
+   "clearance_mm": null,
+   "lean_max": 0.8485404672339512,
+   "torque_pct": 51.07234875943778
+  },
+  {
+   "kind": "trick",
+   "name": "peekaboo",
+   "forward_mm": 0.17782412377075804,
+   "lateral_mm": -0.1260249895138556,
+   "yaw_deg": -0.8461140421914582,
+   "min_up": 0.9998831268607361,
+   "fell": false,
+   "clearance_mm": null,
+   "lean_max": 0.8490231307633255,
+   "torque_pct": 39.82563025688247
+  },
+  {
+   "kind": "trick",
+   "name": "point_L",
+   "forward_mm": 0.36030567693823745,
+   "lateral_mm": 1.2597979891457496,
+   "yaw_deg": 1.1470840086750618,
+   "min_up": 0.9998659832218032,
+   "fell": false,
+   "clearance_mm": null,
+   "lean_max": 0.856224731194293,
+   "torque_pct": 77.93259056951322
+  },
+  {
+   "kind": "trick",
+   "name": "point_R",
+   "forward_mm": 1.7010499136064625,
+   "lateral_mm": 0.14935286219643268,
+   "yaw_deg": 0.8004654233291073,
+   "min_up": 0.999873452265118,
+   "fell": false,
+   "clearance_mm": null,
+   "lean_max": 0.8711037185841486,
+   "torque_pct": 65.33694367676875
+  },
+  {
+   "kind": "trick",
+   "name": "salute",
+   "forward_mm": 0.5028082014989812,
+   "lateral_mm": -1.2519609946473227,
+   "yaw_deg": 0.4343884664222259,
+   "min_up": 0.9998806001822215,
+   "fell": false,
+   "clearance_mm": null,
+   "lean_max": 0.8353825470869524,
+   "torque_pct": 56.32223214042591
+  },
+  {
+   "kind": "trick",
+   "name": "shiver",
+   "forward_mm": -0.727398062191873,
+   "lateral_mm": -0.5838254133681169,
+   "yaw_deg": 0.16986100618492025,
+   "min_up": 0.9995591671361239,
+   "fell": false,
+   "clearance_mm": null,
+   "lean_max": 1.6834373399270892,
+   "torque_pct": 100.00000000000001
+  },
+  {
+   "kind": "trick",
+   "name": "sneeze",
+   "forward_mm": 1.0617848326031343,
+   "lateral_mm": 1.6952496754283644,
+   "yaw_deg": 1.5833149242302078,
+   "min_up": 0.9958363226087066,
+   "fell": false,
+   "clearance_mm": null,
+   "lean_max": 5.21918177994028,
+   "torque_pct": 100.00000000000001
+  },
+  {
+   "kind": "trick",
+   "name": "spin",
+   "forward_mm": -169.00384702499582,
+   "lateral_mm": 6.038676513691728,
+   "yaw_deg": 10.244384575579513,
+   "min_up": -0.3048985211175532,
+   "fell": true,
+   "clearance_mm": null,
+   "lean_max": 175.85851718647186,
+   "torque_pct": 100.00000000000001
+  },
+  {
+   "kind": "trick",
+   "name": "stretch",
+   "forward_mm": 1.8576242266827716,
+   "lateral_mm": 1.9255945417245048,
+   "yaw_deg": 1.7236110431310734,
+   "min_up": 0.9995373805205389,
+   "fell": false,
+   "clearance_mm": null,
+   "lean_max": 1.6602353936348442,
+   "torque_pct": 100.00000000000001
+  },
+  {
+   "kind": "trick",
+   "name": "wave",
+   "forward_mm": 0.23389533852746938,
+   "lateral_mm": -0.2920718730493382,
+   "yaw_deg": 1.4784368523045646,
+   "min_up": 0.9998754450597586,
+   "fell": false,
+   "clearance_mm": null,
+   "lean_max": 0.8433479972574973,
+   "torque_pct": 55.32534890127597
+  },
+  {
+   "kind": "dance",
+   "name": "bob",
+   "forward_mm": 1.1897155274194522,
+   "lateral_mm": 0.9108300973084453,
+   "yaw_deg": -2.5317161140494515,
+   "min_up": 0.9893811524588648,
+   "fell": false,
+   "clearance_mm": null,
+   "lean_max": 8.352186356979338,
+   "torque_pct": 100.00000000000001
+  },
+  {
+   "kind": "dance",
+   "name": "flap",
+   "forward_mm": 3.886958786231079,
+   "lateral_mm": -3.9591586933934244,
+   "yaw_deg": 15.964409883708147,
+   "min_up": 0.9958213462863775,
+   "fell": false,
+   "clearance_mm": null,
+   "lean_max": 5.102457971331408,
+   "torque_pct": 100.00000000000001
+  },
+  {
+   "kind": "dance",
+   "name": "sway",
+   "forward_mm": 21.358355229778205,
+   "lateral_mm": 1.9367192876940145,
+   "yaw_deg": -2.9226082966275473,
+   "min_up": 0.9559421686225185,
+   "fell": false,
+   "clearance_mm": null,
+   "lean_max": 16.806315530135276,
+   "torque_pct": 100.00000000000001
+  }
+ ],
+ "gait": [
+  {
+   "surface": "hard floor",
+   "speed_mms": 9.799304762319405,
+   "clearance_mm": 18.55540296100348,
+   "falls": 0,
+   "of": 2,
+   "lean_max": 17.83721821199672,
+   "torque_pct": 100.00000000000001
+  }
+ ],
+ "pushes": [
+  {
+   "force_N": 0.6,
+   "survived": 8,
+   "of": 8
+  },
+  {
+   "force_N": 1.0,
+   "survived": 8,
+   "of": 8
+  },
+  {
+   "force_N": 1.4,
+   "survived": 7,
+   "of": 8
+  },
+  {
+   "force_N": 1.8,
+   "survived": 3,
+   "of": 8
+  },
+  {
+   "force_N": 2.2,
+   "survived": 2,
+   "of": 8
+  }
+ ],
+ "standing_by_surface": [
+  {
+   "surface": "hard floor",
+   "up": 0.9998489898416351,
+   "lean": 0.9661199165926555,
+   "com_mm": 106.33779208812794,
+   "stayed_up": true
+  },
+  {
+   "surface": "low pile 4 mm",
+   "up": 0.9995939888802383,
+   "lean": 1.078178489176831,
+   "com_mm": 104.47166124398153,
+   "stayed_up": true
+  },
+  {
+   "surface": "medium pile 8 mm",
+   "up": 0.9996482293383666,
+   "lean": 1.4910477612962223,
+   "com_mm": 102.9995174762725,
+   "stayed_up": true
+  },
+  {
+   "surface": "deep pile 14 mm",
+   "up": 0.06901446894401908,
+   "lean": 45.591817769124944,
+   "com_mm": 40.202095776794096,
+   "stayed_up": false
+  }
+ ],
+ "seconds": 243.22323036193848
+}

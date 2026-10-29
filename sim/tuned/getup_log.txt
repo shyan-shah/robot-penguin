@@ -1,0 +1,73 @@
+=== learning recovery from: back ===
+  back  iter  0  best    8.3  final_up 0.049  peak 0.135  recovered=False
+  back  iter  1  best    8.3  final_up 0.049  peak 0.135  recovered=False
+  back  iter  2  best    8.3  final_up 0.049  peak 0.135  recovered=False
+  back  iter  3  best    8.3  final_up 0.049  peak 0.135  recovered=False
+  back  iter  4  best    8.5  final_up 0.049  peak 0.144  recovered=False
+  back  iter  5  best    8.6  final_up 0.049  peak 0.146  recovered=False
+  back  iter  6  best    8.6  final_up 0.049  peak 0.148  recovered=False
+  back  iter  7  best    8.6  final_up 0.050  peak 0.147  recovered=False
+  back  iter  8  best    8.6  final_up 0.050  peak 0.147  recovered=False
+  back  iter  9  best    8.6  final_up 0.050  peak 0.147  recovered=False
+  back  iter 10  best    8.6  final_up 0.050  peak 0.147  recovered=False
+  back  iter 11  best    8.7  final_up 0.049  peak 0.151  recovered=False
+  back  iter 12  best    8.7  final_up 0.049  peak 0.151  recovered=False
+  back  iter 13  best    8.7  final_up 0.049  peak 0.151  recovered=False
+  back  iter 14  best    8.7  final_up 0.049  peak 0.150  recovered=False
+  back  iter 15  best    8.7  final_up 0.049  peak 0.150  recovered=False
+  back  iter 16  best    8.7  final_up 0.049  peak 0.150  recovered=False
+  back  iter 17  best    8.7  final_up 0.049  peak 0.150  recovered=False
+  back  iter 18  best    8.7  final_up 0.049  peak 0.150  recovered=False
+  back  iter 19  best    8.7  final_up 0.049  peak 0.150  recovered=False
+  back  iter 20  best    8.7  final_up 0.050  peak 0.150  recovered=False
+  back  iter 21  best    8.7  final_up 0.050  peak 0.150  recovered=False
+  -> still stuck  params {"freq": 2.89, "amp_R": 48.65, "amp_L": 83.96, "centre": -24.42, "phase": 0.08, "hip": 18.35, "ank": 10.31, "ank_phase": 0.31, "ramp": 3.28}
+=== learning recovery from: front ===
+  front iter  0  best   16.8  final_up 0.098  peak 0.283  recovered=False
+  front iter  1  best   16.8  final_up 0.098  peak 0.283  recovered=False
+  front iter  2  best   17.0  final_up 0.098  peak 0.289  recovered=False
+  front iter  3  best   17.0  final_up 0.098  peak 0.289  recovered=False
+  front iter  4  best   17.0  final_up 0.098  peak 0.289  recovered=False
+  front iter  5  best   17.0  final_up 0.098  peak 0.289  recovered=False
+  front iter  6  best   17.0  final_up 0.098  peak 0.289  recovered=False
+  front iter  7  best   17.0  final_up 0.098  peak 0.289  recovered=False
+  front iter  8  best   17.0  final_up 0.098  peak 0.289  recovered=False
+  front iter  9  best   17.0  final_up 0.098  peak 0.289  recovered=False
+  front iter 10  best   17.0  final_up 0.098  peak 0.289  recovered=False
+  front iter 11  best   17.0  final_up 0.098  peak 0.289  recovered=False
+  front iter 12  best   17.0  final_up 0.098  peak 0.289  recovered=False
+  front iter 13  best   17.0  final_up 0.098  peak 0.289  recovered=False
+  front iter 14  best   17.0  final_up 0.098  peak 0.289  recovered=False
+  front iter 15  best   17.0  final_up 0.098  peak 0.289  recovered=False
+  front iter 16  best   17.0  final_up 0.098  peak 0.289  recovered=False
+  front iter 17  best   17.0  final_up 0.098  peak 0.289  recovered=False
+  front iter 18  best   17.0  final_up 0.098  peak 0.289  recovered=False
+  front iter 19  best   17.0  final_up 0.098  peak 0.291  recovered=False
+  front iter 20  best   17.0  final_up 0.098  peak 0.291  recovered=False
+  front iter 21  best   17.0  final_up 0.098  peak 0.291  recovered=False
+  -> still stuck  params {"freq": 2.27, "amp_R": 91.62, "amp_L": 75.31, "centre": 137.55, "phase": 2.41, "hip": 18.45, "ank": 15.84, "ank_phase": 0.62, "ramp": 2.75}
+=== learning recovery from: side ===
+  side  iter  0  best   16.1  final_up 0.098  peak 0.253  recovered=False
+  side  iter  1  best   16.1  final_up 0.098  peak 0.253  recovered=False
+  side  iter  2  best   16.8  final_up 0.098  peak 0.282  recovered=False
+  side  iter  3  best   16.8  final_up 0.098  peak 0.282  recovered=False
+  side  iter  4  best   16.9  final_up 0.098  peak 0.285  recovered=False
+  side  iter  5  best   16.9  final_up 0.098  peak 0.285  recovered=False
+  side  iter  6  best   16.9  final_up 0.098  peak 0.285  recovered=False
+  side  iter  7  best   16.9  final_up 0.097  peak 0.286  recovered=False
+  side  iter  8  best   16.9  final_up 0.097  peak 0.286  recovered=False
+  side  iter  9  best   16.9  final_up 0.097  peak 0.286  recovered=False
+  side  iter 10  best   16.9  final_up 0.098  peak 0.286  recovered=False
+  side  iter 11  best   16.9  final_up 0.098  peak 0.286  recovered=False
+  side  iter 12  best   16.9  final_up 0.098  peak 0.287  recovered=False
+  side  iter 13  best   16.9  final_up 0.098  peak 0.287  recovered=False
+  side  iter 14  best   16.9  final_up 0.098  peak 0.287  recovered=False
+  side  iter 15  best   16.9  final_up 0.098  peak 0.287  recovered=False
+  side  iter 16  best   17.1  final_up 0.098  peak 0.295  recovered=False
+  side  iter 17  best   17.1  final_up 0.098  peak 0.295  recovered=False
+  side  iter 18  best   17.1  final_up 0.098  peak 0.295  recovered=False
+  side  iter 19  best   17.1  final_up 0.098  peak 0.295  recovered=False
+  side  iter 20  best   17.1  final_up 0.098  peak 0.295  recovered=False
+  side  iter 21  best   17.1  final_up 0.098  peak 0.295  recovered=False
+  -> still stuck  params {"freq": 2.4, "amp_R": 103.67, "amp_L": 93.22, "centre": 126.92, "phase": -2.77, "hip": 22.28, "ank": 15.42, "ank_phase": 1.71, "ramp": 3.62}
+done in 1944 s

@@ -1,0 +1,13 @@
+=== tail prop, round 5: shuffle backwards out of the deckchair ===
+    scored on the GAIN over the free resting angle, not absolute up
+
+    len  mass g   result
+   bare     0.0   rests at 0.087 -> finishes 0.098   gain +0.011      <- BARE ROBOT (control)
+     90    16.1   rests at 0.695 -> finishes 0.696   gain +0.002   
+    110    19.6   rests at 0.746 -> finishes 0.754   gain +0.008   
+    130    23.2   rests at 0.796 -> finishes 0.797   gain +0.002   
+
+none stands up. best GAIN from any controller: +0.011 (bare)
+A gain near zero means the shuffle cannot shift the body off the tail,
+and the tail's only real benefit is that it prevents lying flat.
+done in 504 s
