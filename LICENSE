@@ -19,15 +19,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-
----
-
-This MIT licence covers the SOFTWARE in this repository:
-
-    sim/        brain/        firmware/        tools/
-    matlab/     CAD/render_shots.py
-
-The HARDWARE DESIGN — the Inventor models, the STL and STEP exports, the
-parameter spreadsheet, the renders, and the documentation in docs/ — is
-licensed separately under Creative Commons Attribution-ShareAlike 4.0
-International. See LICENSE-HARDWARE.
