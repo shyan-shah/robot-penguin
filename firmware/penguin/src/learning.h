@@ -12,8 +12,24 @@
 
 #define PGM_BITS 1024
 #define PGM_BYTES (PGM_BITS / 8)
-#define PGM_MAX_ITEMS 384
 #define PGM_SAY_MAX 160
+
+// Store capacity. This single number dominates the firmware's RAM: sizeof(Assoc)
+// is 304 bytes, so 384 slots is 114 KB - about 70% of everything this build
+// uses. It fits the S3's DRAM comfortably (50.9% of 320 KB), but it overflowed
+// a classic ESP32's dram0_0_seg by 42,688 bytes, which is why the classic gets
+// fewer slots rather than a different design.
+//
+// 224 is still three times the 73 memories a full simulated run ever produced,
+// and nothing else changes: the blob format does not record capacity, and load()
+// stops at PGM_MAX_ITEMS, so a 384-item blob written on an S3 loads its first
+// 224 here without corruption. The fingerprint width (PGM_BITS) is what
+// tools/check_parity.py checks, and that is identical on both boards.
+#if defined(CONFIG_IDF_TARGET_ESP32S3)
+#define PGM_MAX_ITEMS 384
+#else
+#define PGM_MAX_ITEMS 224        // classic ESP32 (WROOM-32)
+#endif
 
 // Tuned on the host against a simulated household with speech-recogniser noise
 // (brain/test_learning.py). Loose means it answers more and is wrong more.

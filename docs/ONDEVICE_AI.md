@@ -28,7 +28,7 @@ fits in flash with room to spare.
       |  every reply becomes a candidate association
       v
    tier 1   associative memory           on the robot, offline, instant
-            384 associations, ~17 KB     86% of what a regular owner says
+            384 assoc. (224 on classic)  86% of what a regular owner says
       |
       |  nothing matched, and no network?
       v
@@ -41,7 +41,15 @@ fits in flash with room to spare.
 Every phrase the robot hears becomes a sparse fingerprint: word unigrams and
 bigrams hashed into 1024 bits, three bits per gram. Matching is Jaccard over the
 set bits — on an MCU that is a 128-byte AND and a popcount per candidate, so
-scanning 384 associations costs well under a millisecond.
+scanning the whole store costs well under a millisecond.
+
+Capacity is **384 associations on an ESP32-S3 and 224 on a classic ESP32**. The
+store is a fixed-size array and `sizeof(Assoc)` is 304 bytes, so 384 slots is
+114 KB — about 70% of the firmware's RAM. That fits the S3's DRAM at 50.9%, but
+overflows a classic ESP32's `dram0_0_seg` by 42,688 bytes, so the classic build
+gets fewer slots. Both are far above the 73 associations a full simulated run
+ever produced, and the blob format does not record capacity: a 384-item file
+written on an S3 loads its first 224 on a classic without corruption.
 
 Each association holds the phrase, what to say, which emote to play, a strength,
 and a timestamp. Strength goes **up** when the response lands and **down** when it

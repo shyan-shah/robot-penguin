@@ -369,7 +369,7 @@ Measured on real phrases:
 | "do a dance" | "what is the capital of peru" | 0.000 |
 
 Why bits and Jaccard rather than embeddings? Because on an MCU this is a 128-byte
-AND and a popcount — scanning 384 memories costs well under a millisecond, with no
+AND and a popcount — scanning the store costs well under a millisecond, with no
 floating point and no model. And bigrams give it just enough word-order sense to
 tell "dance for me" from "dance" without any of the machinery.
 

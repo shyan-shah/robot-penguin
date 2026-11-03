@@ -159,8 +159,12 @@ regular owner says at 95% precision** in 12 KB of flash.
 **Verified in CAD:** 29 occurrences, 54 constraints, 579.7 g, zero interference
 across every pair; all 14 STLs watertight and within 0.37% of the CAD volume.
 
-**Firmware:** compiles clean for the ESP32-S3 (RAM 50.9%, Flash 40.2%). Never
-flashed to a board.
+**Firmware:** compiles clean for **both** supported boards — ESP32-S3
+(RAM 50.9%, Flash 40.2%) and a classic ESP32 DevKitC (RAM 36.2%, Flash 44.0%).
+The S3 is what the BOM specifies and the only board that can run the optional
+on-device language model, but the firmware needs just seven PWM outputs and an
+I²C pair, so a classic ESP32 runs it with a smaller learning store
+(224 associations rather than 384). Never flashed to a board.
 
 **Does not work:** it cannot get up off the floor, and **longer flippers do not
 fix it** — six controller architectures, five flipper lengths, ~5,500 simulated

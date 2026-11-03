@@ -103,9 +103,31 @@ ordering. If you have all of them, the build drops to **~£75–95**.
 - [ ] Digital calipers — for the ⚠ parts
 - [ ] Filament — you are printing at 4p/g, so this is £6.40 regardless
 
-The Arthur Celements folder is CAD only — fairings, cockpit and bottle cage, with
-no BOM or order records — so this split is by part *type*, not by what you
-actually have. Tell me which lines to strike and I will reprice it.
+### Checked against an existing parts drawer
+
+Worked through one real leftovers list. The verdicts generalise, so they are
+kept here.
+
+| You have | Verdict | Why |
+|---|---|---|
+| **Classic ESP32 DevKitC** (spare) | ✅ **Use it** — verified | `pio run -e esp32dev` compiles clean: **RAM 36.2%, Flash 44.0%.** The pin map switches automatically on the build target. Two things had to change to get there, both now in the repo: the learning store drops to 224 slots (it overflowed DRAM by 42,688 bytes at 384), and the partition table becomes `huge_app.csv` (the stock 1.31 MB app partition could not hold a 1.35 MB binary). You only need the S3 if you later build the on-device LM. **Saves £12–19.** |
+| **1S 2000 mAh LiPo + TP4056** | ❌ Not usable | 1S is 3.7 V and the servo rail needs 6 V, so you would need a boost, not the specified buck. 18 W from 3.7 V is a 5.5 A draw — 2.75C on a 2000 mAh cell, with heavy sag. Energy is 7.4 Wh against 22 Wh for 2× 18650, so ~40 min not 2 h. And MG90S torque at 4 V falls to ~1.8 kg·cm, putting the ankle at 82% of stall instead of 67%. The TP4056 is a **1S** charger and cannot charge a 2S pack either. |
+| **Slide switches** | ❌ Order the rocker | ⚠ **Safety.** This switch breaks battery positive carrying 3 A+. Small multipack slide switches are typically rated 0.3–0.5 A. It is also the wrong shape for the 19 × 13 cutout. £1–2 is not worth a lithium fire. |
+| **Prototype PCBs** (multipack) | ✅ Probably — check size | You need one at least **60 × 38 mm** after trimming. A 70 × 90 works; a 40 × 60 or 50 × 70 does not. |
+| **M3 heat-set inserts** | ⚠️ **Measure first** | The bosses are modelled to **Ruthex Ø4.0 × 6 mm** and you need 23. Common alternatives are Ø4.6 × 5.8 or Ø5.0 × 6, which will either not seat or split the boss. Measure OD and length. If they differ, the boss diameter is a parameter — since nothing is printed yet, changing it and re-exporting is free. |
+| **M3 screw assortment** | ✅ Use it | Check it has M3 × 10 (you need 11), × 12 (2) and × 16 (2). |
+| **M3 nylon standoffs** | — Not needed | Not in the design. Note standoffs are not the 8 **nylon washers** that go under the shell flange heads — check the assortment, or any M3 washer will do. |
+| **JST-PH connectors** | ✅ With one caveat | Fine for the head and leg disconnects. **Do not put the 6 V servo-rail trunk through PH** — it is rated ~2 A and that line hits 3 A+. Solder the trunk, or use XH. Individual servos peak under 1 A and are fine. |
+| **Silicone hookup wire** | ✅ Check gauge | 26 AWG is specified; 22–28 all work, and thicker is better for the power trunk. |
+| **Heatshrink** | ✅ Use it | |
+| **ELEGOO kit** — breadboard, jumpers, LEDs, buzzer | ✅ Useful, not required | Not in the BOM, but breadboard the MPU6050 and confirm I²C before soldering anything into the robot. The LEDs are also a cheap way to try "eyes" before committing to round LCDs. |
+
+**One more possible saving:** MG90S servos normally ship with a horn and
+mounting screws. Nine servos may cover all 14 off M2 × 6 and 10 off M2 × 8 —
+check what arrives before ordering those separately.
+
+With the spare ESP32 used and the inserts fitting, the order drops to
+**~£58 budget / ~£96 UK stock** — see the scenario table below.
 
 ## 1. Electronics — the long-lead items, order these first
 
@@ -217,6 +239,8 @@ Paint them instead.
 
 | Scenario | Total |
 |---|--:|
+| **Spare classic ESP32 + a stocked parts drawer** (§0) — the realistic case | **~£58** |
+| …the same, buying UK stock rather than AliExpress | **~£96** |
 | **You have all the generic stock** (§0) — only the penguin-specific parts | **~£75–95** |
 | **Cheapest** — AliExpress throughout, uni filament at 4p/g, own tools | **~£105** |
 | **Realistic mix** — UK for the board, battery and audio; budget for the rest | **~£136** |

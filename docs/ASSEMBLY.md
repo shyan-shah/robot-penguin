@@ -101,25 +101,48 @@ servos unpowered. If it leans, check the horn angles before going further.
 ```
 2× 18650 (7.4 V)
    └─ 3 A fuse ─ rocker switch ─┬─ buck converter ─ 6.0 V ─ servo rail (7 servos)
-                                └─ ESP32-S3 VIN
+                                └─ ESP32 VIN
 ```
 
-| Signal | ESP32-S3 pin |
-|---|---|
-| hip_R / hip_L | 4 / 5 |
-| ankle_R / ankle_L | 6 / 7 |
-| flipper_R / flipper_L | 15 / 16 |
-| beak | 17 |
-| MPU6050 SDA / SCL | 8 / 9 |
-| I²S mic BCLK / WS / DATA | 10 / 11 / 12 |
-| I²S amp BCLK / LRC / DIN | 13 / 14 / 18 |
+**Two boards are supported**, and their GPIO maps are not interchangeable. The
+firmware picks the right set automatically from the build target, so wire to the
+column that matches the board in your hand.
 
-> **These numbers changed.** The table used to carry classic-ESP32 pins, which do
-> not work on the S3 this build specifies: GPIO 22–25 do not exist on an S3 at
-> all, and 26–37 are taken by the SPI flash and the octal PSRAM on an N8R8. Five
-> of the seven servo pins were unusable. Safe general-purpose pins on this board
-> are **1–18, 21, 38–42, 47, 48** (19/20 are native USB, 43/44 are UART0), and
-> everything above is inside that set with room to spare.
+| Signal | ESP32-S3 (`esp32-s3-devkitc-1`) | Classic ESP32 (`esp32dev`) |
+|---|---|---|
+| hip_R / hip_L | 4 / 5 | 13 / 14 |
+| ankle_R / ankle_L | 6 / 7 | 25 / 26 |
+| flipper_R / flipper_L | 15 / 16 | 27 / 32 |
+| beak | 17 | 33 |
+| MPU6050 SDA / SCL | 8 / 9 | 21 / 22 |
+| I²S mic BCLK / WS / DATA | 10 / 11 / 12 | 16 / 17 / 34 |
+| I²S amp BCLK / LRC / DIN | 13 / 14 / 18 | 18 / 19 / 23 |
+
+Build for whichever you have:
+
+```bash
+pio run -e esp32dev -t upload              # classic ESP32 DevKitC
+pio run -e esp32-s3-devkitc-1 -t upload    # the board in the BOM
+```
+
+> **Why the S3 is specified, and when a classic ESP32 is fine.** The firmware
+> needs seven PWM outputs and one I²C pair. It allocates nothing from PSRAM, so
+> a classic ESP32 DevKitC runs it unchanged and the pin map above handles the
+> difference. The S3's 8 MB PSRAM buys exactly one thing: the optional tier-2
+> on-device language model in [ONDEVICE_AI.md](ONDEVICE_AI.md), which is
+> specified but not built. Build that and you need the S3.
+>
+> On an **S3**, GPIO 22–25 do not exist at all and 26–37 are the SPI flash and
+> octal PSRAM; safe pins are 1–18, 21, 38–42, 47, 48 (19/20 are native USB,
+> 43/44 are UART0). On a **classic**, 6–11 are the SPI flash and 34–39 are
+> input-only — which is why the mic's DATA line, an input, can sit on 34 and
+> free a real GPIO. The classic servo pins above avoid every strapping pin
+> (0, 2, 4, 5, 12, 15).
+
+> **The I²S rows are for wiring only.** There is no I²S code in the firmware
+> yet — the host owns speech, the LLM and text-to-speech, and the on-robot
+> audio path is not implemented. Wire the mic and amp to these pins so the
+> hardware is ready, but do not expect sound on first power-on.
 
 **Give the servos their own ground path back to the buck**, not through the
 ESP32's ground pin. Seven MG90S starting together will brown out a dev board that

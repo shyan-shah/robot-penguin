@@ -20,13 +20,31 @@
 #include "learning.h"
 
 // ----------------------------------------------------------------- hardware
-// ESP32-S3-DevKitC-1 N8R8 pin map. NOT the classic-ESP32 numbers: on the S3 the
-// GPIOs 22-25 do not exist at all, and 26-37 are taken by the SPI flash and the
-// octal PSRAM. Five of the seven pins this used to use are unusable on the board
-// the BOM specifies. Safe general-purpose pins on N8R8 are 1-18, 21, 38-42, 47
-// and 48 (19/20 are native USB, 43/44 are UART0).
+// TWO BOARDS ARE SUPPORTED. The BOM specifies an ESP32-S3-DevKitC-1 N8R8, but
+// this firmware needs only seven PWM outputs and one I2C pair. It allocates
+// nothing from PSRAM, and it owns no audio - the host does speech, the LLM and
+// text-to-speech, so the I2S amp and mic never touch these pins. A classic
+// ESP32 DevKitC therefore runs it unchanged.
+//
+// The only thing the S3 buys is its 8 MB PSRAM, and the only thing that wants
+// PSRAM is the optional tier-2 on-device language model in docs/ONDEVICE_AI.md,
+// which is specified but not built. Build that, and you need the S3.
+//
+// The two chips have incompatible GPIO maps, hence the split below:
+//   S3 N8R8  - GPIOs 22-25 do not exist at all; 26-37 are the SPI flash and the
+//              octal PSRAM. Safe: 1-18, 21, 38-42, 47, 48 (19/20 are native
+//              USB, 43/44 are UART0).
+//   classic  - GPIOs 6-11 are the SPI flash, and 34-39 are input-only so they
+//              cannot drive a servo at all. The seven below are PWM-capable,
+//              clear of the flash, and none is a strapping pin.
 // order: hip_R, hip_L, ankle_R, ankle_L, flipper_R, flipper_L, beak
+#if defined(CONFIG_IDF_TARGET_ESP32S3)
 static const int SERVO_PIN[N_JOINTS] = {4, 5, 6, 7, 15, 16, 17};
+static const int I2C_SDA = 8, I2C_SCL = 9;
+#else   // classic ESP32 (WROOM-32), board = esp32dev
+static const int SERVO_PIN[N_JOINTS] = {13, 14, 25, 26, 27, 32, 33};
+static const int I2C_SDA = 21, I2C_SCL = 22;     // the classic Arduino default
+#endif
 //                                 hipR hipL ankR ankL flipR flipL beak
 
 // Joint limits. Hips/ankles/beak come from the CAD; the FLIPPER range is set by
@@ -111,7 +129,7 @@ static void sampleMotion() {
 
 // -------------------------------------------------------------------- IMU
 static void imuInit() {
-  Wire.begin(8, 9);                               // MPU6050 SDA 8, SCL 9 (S3-safe)
+  Wire.begin(I2C_SDA, I2C_SCL);                   // see the board note at the top
   Wire.setClock(400000);
   Wire.beginTransmission(MPU); Wire.write(0x6B); Wire.write(0x00); Wire.endTransmission();
   Wire.beginTransmission(MPU); Wire.write(0x1C); Wire.write(0x08); Wire.endTransmission(); // +-4g

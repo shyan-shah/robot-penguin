@@ -41,6 +41,10 @@ import time
 BITS = 1024
 BYTES = BITS // 8
 MAX_ITEMS = 384            # ~16 KB of flash at 42 bytes of fingerprint + payload
+                           # Firmware capacity is 384 on an ESP32-S3 but 224 on a
+                           # classic ESP32 (RAM); see firmware/penguin/src/learning.h.
+                           # A longer blob is not corrupt there - load() keeps the
+                           # first PGM_MAX_ITEMS and stops.
 MATCH_THRESHOLD = 0.40     # Jaccard; swept in test_learning.py (56% coverage, 93% precision)
 MERGE_THRESHOLD = 0.48     # above this, a new phrase is the same intent reworded
 STRONG = 2.0               # strength at which the robot answers offline without asking the cloud
