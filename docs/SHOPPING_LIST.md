@@ -25,6 +25,88 @@ named UK retailer; everything else is a realistic range from current listings.
 
 ---
 
+## 0. Exact quantities, and what you may already have
+
+Two different numbers matter, and this page previously blurred them:
+
+- **Used** — what goes into the finished robot.
+- **Order** — used, plus spares where a part is easy to lose, strip or damage.
+
+### What the robot actually uses
+
+| Part | Used | Order | Spare rationale |
+|---|--:|--:|---|
+| ESP32-S3 DevKitC-1 N8R8 | 1 | 1 | |
+| MG90S servo | **7** | **9** | Easiest part to burn out or strip. Two spares. |
+| 18650 cell, protected | 2 | 2 | |
+| 2× 18650 holder | 1 | 1 | |
+| Buck converter 6 V ≥3 A | 1 | 1 | |
+| MPU6050 IMU | 1 | 1 | |
+| INMP441 mic | 1 | 1 | |
+| MAX98357A amp | 1 | 1 | |
+| Speaker Ø23 × 5 mm, 8 Ω | 1 | 1 | |
+| Rocker switch | 1 | 1 | |
+| USB-C breakout | 1 | 1 | |
+| Protoboard 60 × 38 mm | 1 | 1 | Trim from a 60 × 40. |
+| Inline fuse holder + 3 A fuse | 1 | 1 | |
+| Silicone wire 26 AWG | ~2 m | 2–3 m | |
+| JST-XH / Dupont pairs | ~15 | 20 | |
+| **M3 heat-set insert**, Ruthex Ø4.0 × 6 | **23** | 40 (sold in 100s) | You will ruin a few learning the technique. |
+| M3 × 10 socket cap | **11** | 15 | 8 frame→columns and shells→base plate, 3 shell top tabs→bridge. |
+| M3 × 12 socket cap | 2 | 5 | Neck spigot → bridge. |
+| M3 × 16 socket cap | 2 | 5 | Head halves. |
+| M3 nylon washer | 8 | 10 | Under the shell flange heads. |
+| M2 × 6 self-tapper | 14 | 20 | 2 per servo × 7. |
+| M2 × 8 self-tapper | 10 | 15 | Servo horns. |
+| Steel rod Ø2 mm | 30 mm | 1 length | Beak hinge pin. |
+| Piano wire Ø1.2 mm | ~40 mm | 1 length | Beak pushrod, Z-bend each end. |
+
+Seven servos are used; the eighth and ninth are spares. **23 heat-set inserts**
+is the exact count, not an estimate.
+
+### Order these — penguin-specific
+
+Nothing generic substitutes for these, and four of them carry hard dimensions
+the CAD is modelled to.
+
+- [ ] **ESP32-S3 DevKitC-1 N8R8** — must be the **S3 with 8 MB PSRAM**. A classic
+      ESP32 or an N8R2 will not do: five of the seven servo pins do not exist on
+      a classic ESP32, and the PSRAM is the only reason the on-device language
+      model is possible later.
+- [ ] **MG90S × 9** — one part number for every joint. ⚠ 22.8 × 12.2 × 22.7 mm.
+- [ ] **MPU6050** — mandatory. No IMU, no balance loop, no fall detection.
+- [ ] **INMP441** and **MAX98357A** — the I²S pair.
+- [ ] **Speaker Ø23 × 5 mm, 8 Ω** — ⚠ hard dimension, the seat ring is modelled to it.
+- [ ] **18650 × 2 + holder** — ⚠ 65 × 18 mm and 77 × 41 × 21 mm. Buy protected
+      cells from a reputable seller; fake 18650s are rampant.
+- [ ] **Buck converter 6 V ≥3 A** — ⚠ 30 × 22 mm, holes 24 × 16.
+- [ ] **Ruthex M3 Ø4.0 × 6 inserts** — ⚠ the bosses are modelled to the Ruthex
+      profile specifically. Another brand's taper may not seat.
+
+### Check your leftovers first — generic maker stock
+
+These are the same parts any project uses, so check what you have before
+ordering. If you have all of them, the build drops to **~£75–95**.
+
+- [ ] M3 socket caps — 10 mm ×15, 12 mm ×5, 16 mm ×5
+- [ ] M3 nylon washers ×10
+- [ ] M2 self-tappers — 6 mm ×20, 8 mm ×15
+- [ ] Silicone wire 26 AWG, 2–3 m in a few colours
+- [ ] JST-XH or Dupont connector pairs ×20
+- [ ] Heat-shrink assortment
+- [ ] Ø2 mm steel rod and Ø1.2 mm piano wire — a few cm of each
+- [ ] Rocker switch — ⚠ needs a 19 × 13 cutout, so measure before assuming
+- [ ] USB-C breakout — ⚠ 15 × 12 flange
+- [ ] Protoboard — any 60 × 40 double-sided, trimmed to 38
+- [ ] Inline fuse holder + 3 A blade fuse
+- [ ] Soldering iron, and a tip you do not mind dedicating to heat-set inserts
+- [ ] Digital calipers — for the ⚠ parts
+- [ ] Filament — you are printing at 4p/g, so this is £6.40 regardless
+
+The Arthur Celements folder is CAD only — fairings, cockpit and bottle cage, with
+no BOM or order records — so this split is by part *type*, not by what you
+actually have. Tell me which lines to strike and I will reprice it.
+
 ## 1. Electronics — the long-lead items, order these first
 
 | Qty | Part | Budget | UK stock | What to search for | Why this one |
@@ -57,7 +139,7 @@ Order the multipacks — these are pennies and you do not want to stop mid-build
 | Qty | Part | Budget | UK stock | Where it goes |
 |---|---|--:|--:|---|
 | **100** | **M3 heat-set insert, Ruthex Ø4.0 × 6 mm** | 8 | 10 | 23 used. ⚠ The bosses are modelled to the Ruthex profile. Sold in 100s, not 50s. |
-| 10 / 5 / 5 | M3 × 10, × 12, × 16 socket cap | 6 | 12 | Frame to columns, shell flanges, neck spigot, head halves. An M3 assortment box covers all three. |
+| 15 / 5 / 5 | M3 × 10, × 12, × 16 socket cap | 6 | 12 | Frame to columns, shell flanges, neck spigot, head halves. An M3 assortment box covers all three. |
 | 10 | M3 nylon washer | 2 | 4 | Under the shell flange heads |
 | 20 / 15 | M2 × 6 and M2 × 8 self-tapper | 4 | 8 | Servo mounting tabs (2 per servo), servo horns |
 | 1 | **Steel rod Ø2 mm** | 2 | 4 | Cut one 30 mm length — the beak hinge pin |
@@ -135,6 +217,7 @@ Paint them instead.
 
 | Scenario | Total |
 |---|--:|
+| **You have all the generic stock** (§0) — only the penguin-specific parts | **~£75–95** |
 | **Cheapest** — AliExpress throughout, uni filament at 4p/g, own tools | **~£105** |
 | **Realistic mix** — UK for the board, battery and audio; budget for the rest | **~£136** |
 | **All UK stock**, uni filament, own tools | **~£171** |
@@ -194,16 +277,21 @@ Files are in `CAD/exports/stl_print/` — already rotated, sitting on Z=0, centr
 and each verified watertight and within **0.37%** of the CAD volume. Drop them
 straight into the slicer.
 
+**`CAD/exports/stl_print/PRINT_PLAN.md` has the full plan** — print order, per-part
+supports and masses, colour grouping, and the PETG temperatures.
+
 | | |
 |---|---|
+| Material | **PETG throughout** — recommended, see §4 |
+| | *As originally designed:* PETG for base_plate, core_frame, legs, feet; PLA for the shells, head, beak and flippers |
+| Nozzle / bed | 240 / 80 °C for PETG |
 | Layer | 0.2 mm |
 | Walls | 3 perimeters |
 | Infill | 20–25% gyroid |
-| PETG | base_plate, core_frame, leg_L, leg_R, foot_L, foot_R |
-| PLA | body_front, body_back, head_front, head_back, beak_upper, beak_lower, flipper_L, flipper_R |
 | Supports | core_frame (bridge cantilever, cheek shelves), legs (ankle servo cavity), feet (bracket overhang), flippers (under the hub) |
 | Largest footprint | body shells, 106 × 115 mm — fits a 180 mm bed |
 | Tallest | core_frame, 80 mm |
+| First print | `beak_upper` — 15 minutes, checks accuracy before you commit hours |
 
 ---
 
