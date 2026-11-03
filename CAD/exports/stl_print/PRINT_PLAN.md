@@ -42,20 +42,38 @@ Deliberately not "biggest first" — this order front-loads the parts whose
 dimensional accuracy everything else depends on, and gets a cheap failure in
 early rather than six hours in.
 
-| # | Part | Supports | Solid | At 20% | Why here |
-|---|---|---|--:|--:|---|
-| 1 | `beak_upper` | no | 1.5 g | ~1 g | **Test print.** ~15 minutes. Check dimensional accuracy and surface finish before committing hours of PETG. |
-| 2 | `core_frame` | **yes** — bridge cantilever, cheek shelves | 55.6 g | ~28 g | The skeleton. Every servo and board locates off it, so if the printer is off, you want to know now. Check the 23 insert bosses accept a Ruthex Ø4.0 × 6. |
-| 3 | `base_plate` | no | 33.3 g | ~17 g | Holds the battery, buck and protoboard. Verify the 60 × 38 protoboard pocket and the 77 × 41 holder footprint. |
-| 4 | `leg_L`, `leg_R` | **yes** — ankle servo cavity | 17.7 g ea | ~9 g ea | Test-fit an MG90S in the cavity before printing anything cosmetic. |
-| 5 | `foot_L`, `foot_R` | **yes** — bracket overhang | 14.1 g ea | ~7 g ea | Then you can stand the lower half up and check it balances. |
-| 6 | `body_front` | no | 51.5 g | ~26 g | Longest print. Flange holes must line up with the base plate. |
-| 7 | `body_back` | no | 53.7 g | ~27 g | Check the USB-C and rocker-switch cutouts against the real parts. |
-| 8 | `head_front` | no | 21.5 g | ~11 g | |
-| 9 | `head_back` | no | 23.8 g | ~12 g | Mic holes in the crown. |
-| 10 | `flipper_L`, `flipper_R` | **yes** — under the hub | 6.5 g ea | ~3 g ea | |
-| 11 | `beak_lower` | no | 2.1 g | ~1 g | Last. Needs the Ø2 mm hinge pin and the Ø1.2 mm pushrod. |
-| | **Total** | | **319 g** | **~160 g** | **≈ £6.40** |
+| # | Part | Qty | Colour | Infill | Supports | Solid | Printed |
+|---|---|--:|---|--:|---|--:|--:|
+| 1 | `beak_upper` | 1 | orange | 25% | no | 1.5 g | ~1 g |
+| 2 | `core_frame` | 1 | grey | **25%** | **yes** | 55.6 g | ~31 g |
+| 3 | `base_plate` | 1 | grey | **25%** | no | 33.3 g | ~18 g |
+| 4 | `leg_L`, `leg_R` | 2 | grey | **25%** | **yes** | 17.7 g ea | ~10 g ea |
+| 5 | `foot_L`, `foot_R` | 2 | orange | **25%** | **yes** | 14.1 g ea | ~8 g ea |
+| 6 | `body_front` | 1 | white | 20% | no | 51.5 g | ~26 g |
+| 7 | `body_back` | 1 | black | 20% | no | 53.7 g | ~27 g |
+| 8 | `head_front` | 1 | white | 20% | no | 21.5 g | ~11 g |
+| 9 | `head_back` | 1 | black | 20% | no | 23.8 g | ~12 g |
+| 10 | `flipper_L`, `flipper_R` | 2 | black | 25% | **yes** | 6.5 g ea | ~4 g ea |
+| 11 | `beak_lower` | 1 | orange | 25% | no | 2.1 g | ~1 g |
+| | **14 parts** | | | | 6 need supports | **319 g** | **~171 g** |
+
+At 4p/g that is **£6.84**.
+
+**Why the order is what it is.** `beak_upper` is a 15-minute test print that
+catches a mis-set printer before you commit hours. `core_frame` next because
+every servo and board locates off it, and it is where you confirm a Ruthex
+Ø4.0 × 6 seats in a boss. Then `base_plate` — check the 60 × 38 protoboard
+pocket and the 77 × 41 battery-holder footprint against the real parts. Legs
+and feet next, so you can stand the lower half up and see it balance before
+printing anything cosmetic. Shells last: `body_front` is the longest print,
+and `body_back` is where you verify the USB-C and rocker-switch cutouts.
+
+**Why 25% on the structural parts and 20% on the shells.** The documented
+spec is 20–25% gyroid throughout; this splits it by what the part does.
+`core_frame`, `base_plate`, the legs and the feet carry load, hold servos and
+take landing impacts. The shells are cosmetic and are the largest parts, so
+they are where lower infill actually saves anything. The flippers and beak are
+small enough that infill barely moves the number — 25% costs nothing there.
 
 Supports are needed on six parts: `core_frame`, both legs, both feet, both
 flippers. `docs/BOM.md` says why for each.
