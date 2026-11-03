@@ -75,20 +75,51 @@ Order the multipacks — these are pennies and you do not want to stop mid-build
 
 ## 4. Filament
 
-**You only need three spools, not five** — see *Materials and colours* below.
-Skip this section entirely if you already have PETG and PLA.
+**At the Bath per-gram rate of 4p/g, the entire robot is £6.32 of plastic.**
+158 g at 20% infill. Filament is not a meaningful line item in this build, so
+choose material on mechanics, not cost.
 
-| Qty | Material | Budget | UK stock | Parts |
-|---|---|--:|--:|---|
-| 1 kg | **PETG** — grey or natural | 15 | 25 | base plate, core frame, legs (**and feet**, see note) |
-| 1 kg | **PLA** — white | 12 | 20 | body front, head front |
-| 1 kg | **PLA** — black | 12 | 20 | body back, head back, both flippers |
-| — | **PLA/PETG — orange** | 0 | 0 | beak and feet need **16 g between them**. Use scrap, or paint. Not worth a spool. |
-| | **Subtotal** | **39** | **65** | |
+| | Mass | At 4p/g | Buying spools instead |
+|---|--:|--:|--:|
+| Whole robot, 20% infill | 158 g | **£6.32** | £39–65 for three spools |
+| Whole robot, solid | 316 g | £12.64 | |
+| Reprinting the six structural parts | 120 g | £4.80 | |
 
-Premium brands run much higher — Prusament PETG is about **£37/kg** in the UK.
-At 158 g of total printed material, the spool choice barely affects the build
-cost; it affects the other nine prints you will do with what is left.
+Spool prices for reference if you print at home: budget PETG/PLA is £12–25/kg,
+and premium runs much higher — Prusament PETG is about **£37/kg** in the UK.
+
+### Can it all be one material?
+
+**Yes. Print everything in PETG.** The dual-material split exists for good
+reasons, but all of them point at PETG as the single choice, and the cost
+argument that favoured PLA disappears at 4p/g.
+
+| | All PETG — recommended | All PLA |
+|---|---|---|
+| **Impact** | Tough. Survives being dropped. | Brittle. Cracks at the thin ankle and flipper sections. |
+| **Heat** | Tg ~80 °C. Fine against a warm servo. | Tg ~60 °C. The legs and frame hold servos that reach 50 °C+ under load, and they carry static weight all day — PLA creeps. |
+| **Stiffness** | ~2.1 GPa | ~3.5 GPa — actually *stiffer*, despite what `BOM.md` implies |
+| **Surface finish** | Fussier. Stringing, and less crisp on the head shells. | Excellent. The reason PLA was specified for the visible parts. |
+| **Mass change** | +3.9 g (+0.7%) | −3.6 g (−0.6%) |
+
+**Why PETG wins for this particular robot: it falls over on purpose.** It cannot
+self-right — it detects the fall, tries once, then waggles to be picked up. A
+robot whose normal operating mode includes faceplanting onto a desk wants impact
+resistance far more than it wants a flawless shell. The feet, ankles and
+flippers are exactly the thin sections that take those impacts, and exactly
+where PLA is weakest.
+
+The cost of being wrong is small either way: the mass change is under 1%, so the
+tuned gait stays valid, and reprinting the six structural parts is **£4.80**.
+
+**If you would rather have the finish**, all PLA is a reasonable choice for a
+robot that lives on a desk and gets handled gently. Watch `core_frame`,
+`leg_L/R`, `foot_L/R` and `base_plate` — those six are the ones that will creep
+or crack first. Do not leave an all-PLA build on a sunny windowsill or in a car.
+
+**Do not mix materials within a part**, and do not switch the feet to PLA just
+to get the orange — they sit against the ankle servo and take the landing loads.
+Paint them instead.
 
 ## 5. Tools you may not have
 
@@ -104,10 +135,12 @@ cost; it affects the other nine prints you will do with what is left.
 
 | Scenario | Total |
 |---|--:|
-| **Cheapest** — AliExpress throughout, you already have filament and tools | **~£99** |
-| **Realistic mix** — UK for the board, battery and audio; budget for the rest | **~£130** |
-| **All UK stock**, you already have filament and tools | **~£165** |
-| **Everything new** — UK stock, three spools, soldering iron and calipers | **~£285** |
+| **Cheapest** — AliExpress throughout, uni filament at 4p/g, own tools | **~£105** |
+| **Realistic mix** — UK for the board, battery and audio; budget for the rest | **~£136** |
+| **All UK stock**, uni filament, own tools | **~£171** |
+| **All UK stock** plus a soldering iron and calipers | **~£225** |
+
+Printing at home on retail spools instead of the uni's 4p/g adds £33–59.
 
 The single biggest saving is the servos: nine MG90S bought as singles from a UK
 retailer is £40–50, versus £18–22 for a 10-pack either side of the Channel.
@@ -139,12 +172,12 @@ does.
 
 **Two things worth knowing:**
 
-1. **The feet are PETG but render orange.** PETG is specified for stiffness and
-   heat resistance next to the ankle servos, and the colour comes from the
-   render palette. Orange PETG is uncommon and you need 14 g of it, so: print
-   them in whatever PETG you have and paint them, or accept grey feet. Do not
-   switch them to PLA to get the colour — they sit against the servo and take
-   the landing loads.
+1. **The feet are PETG but render orange.** PETG is specified for *toughness*
+   and heat resistance next to the ankle servos — not stiffness, where PLA
+   actually wins — and the colour comes from the render palette. Orange PETG is
+   uncommon and you need 14 g of it, so: print them in whatever PETG you have
+   and paint them, or accept grey feet. Do not switch them to PLA to get the
+   colour — they sit against the servo and take the landing loads.
 2. **The built robot weighs ~425 g, not 580 g.** The 579.7 g figure from CAD
    treats every printed part as solid plastic. At 20% infill the printed parts
    come to ~158 g instead of 316 g, so the real robot lands around 425 g with

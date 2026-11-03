@@ -81,8 +81,9 @@ statically.
 
 | | |
 |---|---|
-| Material | **PETG** — base plate, core frame, legs, feet (stiffness and heat) |
+| Material | **PETG** — base plate, core frame, legs, feet (toughness and heat; PLA is the stiffer of the two but cracks and creeps) |
 | | **PLA** — body shells, head, beak, flippers (surface finish) |
+| | Printing **everything in PETG** is fine and is what `docs/SHOPPING_LIST.md` recommends — it shifts total mass by under 1%. |
 | Layer | 0.2 mm |
 | Walls | 3 perimeters |
 | Infill | 20–25 % gyroid. Solid is 316 g; at 20 % the robot lands near **425 g**. |
