@@ -114,7 +114,7 @@ kept here.
 | **1S 2000 mAh LiPo + TP4056** | ❌ Not usable | 1S is 3.7 V and the servo rail needs 6 V, so you would need a boost, not the specified buck. 18 W from 3.7 V is a 5.5 A draw — 2.75C on a 2000 mAh cell, with heavy sag. Energy is 7.4 Wh against 22 Wh for 2× 18650, so ~40 min not 2 h. And MG90S torque at 4 V falls to ~1.8 kg·cm, putting the ankle at 82% of stall instead of 67%. The TP4056 is a **1S** charger and cannot charge a 2S pack either. |
 | **Slide switches** | ❌ Order the rocker | ⚠ **Safety.** This switch breaks battery positive carrying 3 A+. Small multipack slide switches are typically rated 0.3–0.5 A. It is also the wrong shape for the 19 × 13 cutout. £1–2 is not worth a lithium fire. |
 | **Prototype PCBs** (multipack) | ✅ Probably — check size | You need one at least **60 × 38 mm** after trimming. A 70 × 90 works; a 40 × 60 or 50 × 70 does not. |
-| **M3 heat-set inserts** | ⚠️ **Measure first** | The bosses are modelled to **Ruthex Ø4.0 × 6 mm** and you need 23. Common alternatives are Ø4.6 × 5.8 or Ø5.0 × 6, which will either not seat or split the boss. Measure OD and length. If they differ, the boss diameter is a parameter — since nothing is printed yet, changing it and re-exporting is free. |
+| **M3 heat-set inserts** | ➡️ **Order Ruthex anyway** | The bosses are modelled to **Ruthex Ø4.0 × 6 mm** specifically, and common alternatives (Ø4.6 × 5.8, Ø5.0 × 6) either will not seat or will split the boss. Rather than measure and risk it, buy the Ruthex: £8–10 for 100 when you need 23. Keep whatever you already have for other projects. |
 | **M3 screw assortment** | ✅ Use it | Check it has M3 × 10 (you need 11), × 12 (2) and × 16 (2). |
 | **M3 nylon standoffs** | — Not needed | Not in the design. Note standoffs are not the 8 **nylon washers** that go under the shell flange heads — check the assortment, or any M3 washer will do. |
 | **JST-PH connectors** | ✅ With one caveat | Fine for the head and leg disconnects. **Do not put the 6 V servo-rail trunk through PH** — it is rated ~2 A and that line hits 3 A+. Solder the trunk, or use XH. Individual servos peak under 1 A and are fine. |
@@ -126,8 +126,37 @@ kept here.
 mounting screws. Nine servos may cover all 14 off M2 × 6 and 10 off M2 × 8 —
 check what arrives before ordering those separately.
 
-With the spare ESP32 used and the inserts fitting, the order drops to
-**~£58 budget / ~£96 UK stock** — see the scenario table below.
+### The order, as a basket
+
+Fifteen lines. This is the whole thing, assuming a spare classic ESP32 and a
+stocked fastener drawer.
+
+| Part | Qty | Budget | UK stock |
+|---|--:|--:|--:|
+| MG90S metal-gear servo | 9 | 18.00 | 21.50 |
+| 18650 cell, protected | 2 | 12.00 | 18.00 |
+| **Ruthex M3 Ø4.0 × 6 insert** | 100 | 8.00 | 10.00 |
+| MAX98357A I²S amp | 1 | 2.50 | 5.70 |
+| INMP441 I²S mic | 1 | 3.00 | 7.00 |
+| MPU6050 IMU | 1 | 2.00 | 4.00 |
+| Buck converter 6 V ≥3 A | 1 | 3.00 | 6.00 |
+| Speaker Ø23 × 5 mm, 8 Ω | 1 | 2.00 | 4.00 |
+| 2× 18650 holder | 1 | 2.00 | 4.00 |
+| USB-C breakout | 1 | 2.00 | 4.00 |
+| Inline fuse holder + 3 A fuse | 1 | 2.00 | 4.00 |
+| Rocker switch, 19 × 13 | 1 | 1.00 | 2.00 |
+| Ø2 mm steel rod | 1 | 2.00 | 4.00 |
+| Ø1.2 mm piano wire | 1 | 2.00 | 4.00 |
+| M3 nylon washer | 10 | 2.00 | 4.00 |
+| Filament, 158 g at 4p/g | — | 6.32 | 6.32 |
+| **Total** | | **~£70** | **~£109** |
+
+Order the servos and the ESP32-S3 (if you ever want one) first — they are the
+long-lead items. Everything else is stocked.
+
+With the spare ESP32 used, Ruthex inserts ordered and filament at 4p/g, the
+order comes to **~£70 budget / ~£109 UK stock** — down from ~£105 / ~£171 with
+an empty drawer. Drop the Ruthex and it is ~£62 / ~£99, but see the row above.
 
 ## 1. Electronics — the long-lead items, order these first
 
@@ -239,8 +268,8 @@ Paint them instead.
 
 | Scenario | Total |
 |---|--:|
-| **Spare classic ESP32 + a stocked parts drawer** (§0) — the realistic case | **~£58** |
-| …the same, buying UK stock rather than AliExpress | **~£96** |
+| **Spare classic ESP32 + a stocked parts drawer** (§0) — the realistic case | **~£70** |
+| …the same, buying UK stock rather than AliExpress | **~£109** |
 | **You have all the generic stock** (§0) — only the penguin-specific parts | **~£75–95** |
 | **Cheapest** — AliExpress throughout, uni filament at 4p/g, own tools | **~£105** |
 | **Realistic mix** — UK for the board, battery and audio; budget for the rest | **~£136** |
